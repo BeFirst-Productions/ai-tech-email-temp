@@ -1,0 +1,1244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMS AITECH 2026 - Maritime 4.0 and Beyond</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background: #0a0a1a;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+      }
+      .email-wrapper {
+        width: 650px;
+        background: #0d0d2b;
+        overflow: hidden;
+      }
+
+      /* ===== HERO SECTION ===== */
+      .hero {
+        position: relative;
+        background: #050510 url("assets/images/AITECH-E-image.jpeg") no-repeat
+          center center / cover;
+        padding: 40px 30px 50px;
+        text-align: center;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* background: rgba(
+          5,
+          5,
+          16,
+          0.7
+        ); */
+        /* Dark overlay to keep text readable */
+        z-index: 1;
+      }
+      /* Grid/circuit lines overlay */
+      .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+          linear-gradient(rgba(93, 160, 249, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(93, 160, 249, 0.04) 1px, transparent 1px);
+        background-size: 40px 40px;
+        pointer-events: none;
+        z-index: 1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .tms-logo-area {
+        margin-bottom: 16px;
+      }
+      .tms-text {
+        font-size: 11px;
+        letter-spacing: 3px;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+      .tms-star {
+        color: #5da0f9;
+        font-size: 18px;
+        margin: 0 4px;
+      }
+      .tms-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        margin-bottom: 4px;
+      }
+      .tms-brand span {
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        letter-spacing: 4px;
+        color: rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+      }
+
+      .aitech-logo {
+        font-family: "Roboto", sans-serif;
+        font-size: 80px;
+        font-weight: 700;
+        letter-spacing: 6px;
+        line-height: 1;
+        margin: 8px 0;
+        background: linear-gradient(
+          135deg,
+          #5da0f9 0%,
+          #76399b 50%,
+          #5da0f9 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: none;
+        filter: drop-shadow(0 0 30px rgba(93, 160, 249, 0.4));
+      }
+
+      .subtitle-line1 {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        /* background: linear-gradient(to right, #ffffff, #5159ee, #fa47b8);
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; */
+        color: #fff;
+        letter-spacing: 1px;
+        margin-top: 14px;
+      }
+      .subtitle-line2 {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.8);
+        letter-spacing: 1px;
+        margin-top: 3px;
+      }
+
+      /* Info Bar */
+      .info-bar-border {
+        margin-top: 40px;
+        padding: 2.5px;
+        background: linear-gradient(to right, #76399b, #5da0f9);
+        border-radius: 100px;
+      }
+      .info-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(13, 13, 43, 0.4);
+        border-radius: 100px;
+        padding: 12px 20px;
+      }
+      .info-item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 5px 15px;
+      }
+      .info-item:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .info-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .info-icon svg {
+        width: 100%;
+        height: 100%;
+        fill: #ffffff;
+      }
+      .info-text {
+        text-align: left;
+      }
+      .info-label {
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        background: linear-gradient(to right, #ffffff, #76adf5, #c778f9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-weight: 700;
+        display: inline-block;
+        line-height: 1.1;
+      }
+      .info-value {
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 400;
+        display: block;
+        margin-top: 2px;
+        line-height: 1.1;
+      }
+
+      /* ===== LAUNCH SECTION ===== */
+      .launch-section {
+        background: #ffffff;
+        padding: 50px 50px 10px;
+        text-align: center;
+      }
+      .launch-section p.intro {
+        font-size: 16px;
+        color: #777;
+        line-height: 1.4;
+        margin-bottom: 5px;
+      }
+      .launch-section p.intro strong {
+        color: #000;
+        font-weight: 700;
+      }
+      .launch-title {
+        font-family: "Roboto", sans-serif;
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        margin: 5px 0;
+        background: linear-gradient(to right, #76399b, #5da0f9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: inline-block;
+      }
+      .launch-sub {
+        font-size: 15px;
+        color: #666;
+        line-height: 1.6;
+        margin: 10px auto;
+        max-width: 550px;
+      }
+
+      /* Theme Section */
+      .theme-container {
+        background: #ffffff;
+        padding: 7px 50px 4px;
+        text-align: center;
+      }
+      .theme-header {
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+      .theme-header strong {
+        color: #000;
+        font-weight: 700;
+      }
+      .theme-desc {
+        font-size: 15px;
+        color: #666;
+        line-height: 1.6;
+        margin: 5px auto;
+        max-width: 600px;
+      }
+
+      /* Gradient Band (Forum Section) */
+      .forum-section {
+        background: url("assets/images/AITECH bg-gradient.png") no-repeat center
+          center;
+        background-color: #fff;
+        background-size: cover;
+        padding: 45px 50px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .forum-section::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: repeating-linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.05) 0px,
+          rgba(255, 255, 255, 0.05) 1px,
+          transparent 1px,
+          transparent 40px
+        );
+        pointer-events: none;
+      }
+      .forum-section p {
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 1.6;
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+        margin: 0;
+      }
+      .forum-section p strong {
+        font-weight: 800;
+      }
+
+      /* ===== WHAT AITECH DELIVERS ===== */
+      .delivers-section {
+        background: #050b1f url("assets/images/AITECH delivers-bg.png") center
+          center / cover;
+        padding: 50px 30px;
+        position: relative;
+        overflow: hidden;
+      }
+      .delivers-inner {
+        position: relative;
+        z-index: 1;
+      }
+      .delivers-title-wrap {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .delivers-pill {
+        display: inline-block;
+        background: rgba(13, 13, 43, 0.6);
+        border: 2px solid #76399b;
+        border-radius: 50px;
+        padding: 15px 45px;
+        font-family: "Roboto", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: 1px;
+        box-shadow:
+          0 0 20px rgba(118, 57, 155, 0.6),
+          0 0 10px rgba(93, 160, 249, 0.4);
+      }
+      .delivers-pill span {
+        background: linear-gradient(to right, #ffffff, #9ea2fa, #f674c6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .delivers-grid {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        align-items: stretch;
+      }
+      .deliver-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .deliver-card-top {
+        background: linear-gradient(180deg, #76399b, #5da0f9);
+        border-radius: 20px;
+        padding: 20px 10px;
+        text-align: center;
+        position: relative;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+      .deliver-check {
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        width: 32px;
+        height: 32px;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 5;
+      }
+      .deliver-check svg {
+        width: 18px;
+        height: 18px;
+        fill: #5da0f9;
+        stroke: #5da0f9;
+        stroke-width: 1;
+      }
+      .deliver-card-top h4 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.2;
+        margin: 0;
+      }
+      .deliver-card-body {
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-top: none;
+        border-radius: 0 0 25px 25px;
+        padding: 45px 15px 35px;
+        margin-top: -25px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(15px);
+        box-shadow:
+          inset 0 0 20px rgba(255, 255, 255, 0.1),
+          0 0 20px rgba(93, 160, 249, 0.15);
+      }
+      .deliver-card-body p {
+        font-size: 13px;
+        color: #ffffff;
+        line-height: 1.6;
+        text-align: center;
+        margin: 0;
+        font-weight: 500;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      /* ===== LAUNCHING SECTION ===== */
+      .launching-banner {
+        background: url("assets/images/AITECH launch-bg.png") no-repeat center
+          center / cover;
+        padding: 22px 30px;
+        text-align: center;
+      }
+      .launching-banner p {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 400;
+      }
+      .launching-banner strong {
+        font-style: italic;
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      /* Why Now Section */
+      .why-section {
+        background: #ffffff;
+        padding: 50px 45px 10px 45px;
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        overflow: visible;
+      }
+      .why-image-wrapper {
+        position: relative;
+        width: 320px;
+        flex-shrink: 0;
+        margin-bottom: 20px;
+      }
+      .why-img-shape {
+        width: 100%;
+        height: 280px;
+        z-index: 10;
+        overflow: hidden;
+        position: relative;
+      }
+      .why-img-shape img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .why-banner {
+        position: absolute;
+        bottom: 21px;
+        left: 0px;
+        background: #5d1a8a;
+        padding: 4px 60px 8px 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        /* border-radius: 0 100px 100px 0; */
+        z-index: 0;
+        box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.2);
+      }
+      .why-banner-line {
+        position: absolute;
+        left: 50px;
+        top: 40px;
+        width: 2px;
+        height: 60px;
+        background: #ff33ff;
+        z-index: 5;
+      }
+      .why-banner .icon-circle {
+        width: 20px;
+        height: 20px;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #5d1a8a;
+        font-weight: 800;
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+      .why-banner span {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        background: linear-gradient(to right, #ffffff, #9ea2fa, #f674c6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        white-space: nowrap;
+        /* background: rgba(255, 255, 255, 0.15); */
+        padding: 5px 10px;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        margin-left: 5px;
+      }
+      .why-content {
+        flex: 1;
+      }
+      .why-content p {
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        color: #545454;
+        line-height: 1.7;
+        margin: 0;
+      }
+      .why-content .name-highlight {
+        background: linear-gradient(to right, #5058ef, #f674c6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-weight: 700;
+      }
+      .why-content .year-highlight {
+        color: #ff33ff;
+        font-weight: 700;
+      }
+
+      /* ===== SPONSORS ===== */
+      .sponsors-section {
+        background: #ffffff;
+        padding: 40px 45px;
+      }
+      .sponsors-title {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 4px;
+        background: linear-gradient(to right, #f674c6, #434beb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        font-family: "Roboto", sans-serif;
+      }
+      .sponsors-title::before,
+      .sponsors-title::after {
+        content: "";
+        flex: 1;
+        height: 2px;
+        background: linear-gradient(90deg, #5058ef, #f674c6);
+        max-width: 250px;
+      }
+      .sponsors-title::before {
+        background: linear-gradient(to right, #5058ef, #f674c6);
+      }
+      .sponsors-title::after {
+        background: linear-gradient(to right, #5058ef, #f674c6);
+      }
+
+      .sponsors-grid {
+        display: flex;
+        gap: 20px;
+        align-items: stretch;
+      }
+
+      /* Platinum Card (Left) */
+      .sponsor-card-platinum {
+        flex: 0 0 35%;
+        background: linear-gradient(90deg, #def0ff 0%, #ebd1ff 100%);
+        border-radius: 30px;
+        padding: 6px 6px;
+        text-align: center;
+        border: none;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Multi-Sponsor Card (Right) */
+      .sponsor-card-group {
+        flex: 1;
+        background: #efefef;
+        border-radius: 30px;
+        padding: 25px 20px;
+        border: none;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .sponsor-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .sponsors-bottom-line {
+        margin-top: 40px;
+        height: 2px;
+        background: linear-gradient(to right, #5058ef, #f674c6);
+        width: 100%;
+        border-radius: 2px;
+      }
+
+      .sponsor-label {
+        font-size: 11px;
+        color: #666;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-family: "Roboto", sans-serif;
+      }
+      /* AISS logo */
+      .aiss-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+      .aiss-emblem {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #1a1a4a, #2a2a6a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .aiss-name {
+        font-size: 8px;
+        color: #333;
+        font-family: "Open Sans", sans-serif;
+      }
+      /* TCM Shipping */
+      .tcm-logo {
+        color: #cc0000;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .tcm-sub {
+        font-size: 7px;
+        color: #888;
+        font-family: "Open Sans", sans-serif;
+        display: block;
+      }
+      /* SAIFEE */
+      .saifee-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #e63946, #1d3557);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 700;
+      }
+
+      /* ===== CTA SECTION ===== */
+      .cta-section {
+        background: #ffffff;
+        padding: 24px 40px 0px 30px;
+        text-align: center;
+      }
+      .cta-section p {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+        line-height: 1.2;
+      }
+      .cta-section a {
+        color: #5da0f9;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      .cta-section .highlight {
+        background: linear-gradient(to right, #f674c6, #434beb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      /* ===== FOOTER CTA BAND ===== */
+      .footer-cta {
+        background: linear-gradient(90deg, #050e66 0%, #4b0b73 100%);
+        padding: 40px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        border-radius: 50px 50px 0 0;
+        margin: 0;
+      }
+      .footer-cta-text {
+        font-size: 18px;
+        color: #ffffff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        line-height: 1.3;
+        flex: 1;
+      }
+      .footer-cta-text span {
+        background: linear-gradient(to right, #ffffff, #9ea2fa, #f674c6);
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-weight: 700;
+      }
+
+      .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .book-label {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .book-btn-new {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: transparent;
+        border: 2px solid transparent; /* Space for gradient border */
+        border-radius: 30px;
+        padding: 5px 25px 5px 5px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        /* Simulate gradient border with double background */
+        background-image:
+          linear-gradient(#4b0b73, #4b0b73),
+          linear-gradient(to right, #ffffff, #3a42e9, #f640b3);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+      }
+
+      .book-arrow-circle {
+        width: 35px;
+        height: 35px;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #4a0e78;
+        font-size: 18px;
+        font-weight: 900;
+      }
+
+      .book-btn-url {
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 700;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 0.5px;
+      }
+
+      /* MEDIA QUERIES FOR RESPONSIVENESS */
+      @media screen and (max-width: 600px) {
+        .email-wrapper {
+          width: 100% !important;
+        }
+        .hero {
+          padding: 30px 20px 40px !important;
+        }
+        .aitech-logo {
+          font-size: 60px !important;
+        }
+        .subtitle-line1 {
+          font-size: 12px !important;
+        }
+        .info-bar-border {
+          border-radius: 40px;
+          background: transparent;
+          padding: 0;
+        }
+        .info-bar {
+          flex-direction: column;
+          gap: 0;
+          padding: 30px !important;
+          border-radius: 40px;
+          background: linear-gradient(
+            135deg,
+            rgba(80, 24, 120, 0.9),
+            rgba(40, 60, 160, 0.9)
+          );
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .info-item {
+          width: 100%;
+          border-right: none !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 20px 0 !important;
+          justify-content: center;
+          gap: 20px;
+        }
+        .info-item:last-child {
+          border-bottom: none;
+          padding-bottom: 0 !important;
+        }
+        .info-item:first-child {
+          padding-top: 0 !important;
+        }
+        .info-text {
+          text-align: left;
+        }
+        .info-label {
+          font-size: 16px;
+        }
+        .info-value {
+          font-size: 14px;
+        }
+        .info-icon {
+          width: 32px;
+          height: 32px;
+        }
+        .delivers-grid {
+          flex-direction: column;
+        }
+        .sponsors-grid {
+          flex-direction: column;
+        }
+        .sponsor-card-platinum {
+          flex: auto !important;
+        }
+        .why-section {
+          flex-direction: column;
+          padding: 40px 20px !important;
+        }
+        .why-image-wrapper {
+          width: 100% !important;
+          margin-bottom: 30px;
+        }
+        .why-img-shape {
+          height: 200px !important;
+        }
+        .footer-cta {
+          flex-direction: column;
+          text-align: center;
+          padding: 30px 20px !important;
+          gap: 30px;
+        }
+        .footer-cta-text {
+          font-size: 20px !important;
+        }
+        .footer-right {
+          width: 100%;
+          align-items: center;
+        }
+        .book-btn-new {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <!-- ===== HERO ===== -->
+      <div class="hero">
+        <div class="hero-content">
+          <div class="tms-logo-area">
+            <img
+              src="assets/images/AITECH E-LOGO.png"
+              alt="TMS Logo"
+              style="
+                max-width: 320px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                padding-bottom: 5px;
+              "
+            />
+          </div>
+
+          <div class="subtitle-line1">Maritime 4.0 and Beyond:</div>
+          <div class="subtitle-line2">Accelerating Intelligence in Motion</div>
+
+          <div class="info-bar-border">
+            <div class="info-bar">
+              <!-- Date -->
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M19,4H18V2H16V4H8V2H6V4H5C3.89,4 3.01,4.9 3.01,6L3,20C3,21.1 3.89,22 5,22H19C20.1,22 21,21.1 21,20V6C21,4.9 20.1,4 19,4M19,20H5V10H19V20M19,8H5V6H19V8M7,12H9V14H7V12M11,12H13V14H11V12M15,12H17V14H15V12Z"
+                    />
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <span class="info-label">Date:</span>
+                  <span class="info-value">April 14, 2026</span>
+                </div>
+              </div>
+              <!-- Time -->
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                    />
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <span class="info-label">Time:</span>
+                  <span class="info-value">14:30 – 18:00</span>
+                </div>
+              </div>
+              <!-- Venue -->
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12,2C8.13,2 5,5.13 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9C19,5.13 15.87,2 12,2M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5Z"
+                    />
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <span class="info-label">Venue:</span>
+                  <span class="info-value"
+                    >Taj Exotica Resort, The Palm, Dubai</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== LAUNCH SECTION ===== -->
+      <div class="launch-section">
+        <p class="intro">
+          <strong>The Maritime Standard</strong> announces the official launch
+          of
+        </p>
+        <div class="launch-title">TMS AITECH 2026</div>
+        <p class="launch-sub">
+          a new platform focused on artificial intelligence, digital
+          transformation, and the future of intelligent shipping.
+        </p>
+      </div>
+
+      <!-- ===== THEME SECTION ===== -->
+      <div class="theme-container">
+        <p class="theme-header">
+          Themed
+          <strong
+            >"Maritime 4.0 and Beyond: Accelerating Intelligence in
+            Motion"</strong
+          >
+          the event comes at a decisive moment as data-driven operations,
+          autonomous systems, predictive analytics, and new IMO digital
+          frameworks begin to redefine how global maritime trade operates.
+        </p>
+        <!-- <p class="theme-desc">
+          the event comes at a decisive moment as data-driven operations,
+          autonomous systems, predictive analytics, and new IMO digital
+          frameworks begin to redefine how global maritime trade operates.
+        </p> -->
+      </div>
+
+      <!-- ===== GRADIENT BAND (FORUM SECTION) ===== -->
+      <div class="forum-section">
+        <p>
+          <strong>TMS AITECH 2026</strong> will serve as a central forum for
+          global leaders, innovators, port authorities, shipowners, technology
+          developers, and regulators to discuss the next phase of maritime
+          digitalization.
+        </p>
+      </div>
+
+      <!-- WHITE SPACER -->
+      <div style="background-color: #ffffff; padding: 40px 0"></div>
+
+      <!-- ===== WHAT AITECH DELIVERS ===== -->
+      <div class="delivers-section">
+        <div class="delivers-inner">
+          <div class="delivers-title-wrap">
+            <div class="delivers-pill">What <span>AITECH</span> Delivers</div>
+          </div>
+          <div class="delivers-grid">
+            <!-- Card 1 -->
+            <div class="deliver-card">
+              <div class="deliver-card-top">
+                <div class="deliver-check">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                    />
+                  </svg>
+                </div>
+                <h4>High-level conference sessions</h4>
+              </div>
+              <div class="deliver-card-body">
+                <p>
+                  led by regional & international AI and maritime decision
+                  makers.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="deliver-card">
+              <div class="deliver-card-top">
+                <div class="deliver-check">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                    />
+                  </svg>
+                </div>
+                <h4>Case Studies</h4>
+              </div>
+              <div class="deliver-card-body">
+                <p>
+                  showcasing supply chain visibility through AI, IoT, and
+                  blockchain-integrated systems
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="deliver-card">
+              <div class="deliver-card-top">
+                <div class="deliver-check">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                    />
+                  </svg>
+                </div>
+                <h4>In-depth discussions</h4>
+              </div>
+              <div class="deliver-card-body">
+                <p>
+                  on decision intelligence, AI-enabled cybersecurity, autonomous
+                  vessels, smart ports, digital twins, and IMO-aligned
+                  compliance
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="deliver-card">
+              <div class="deliver-card-top">
+                <div class="deliver-check">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                    />
+                  </svg>
+                </div>
+                <h4>Exclusive industry reports & insights</h4>
+              </div>
+              <div class="deliver-card-body">
+                <p>via the AITech Knowledge Hub</p>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="deliver-card">
+              <div class="deliver-card-top">
+                <div class="deliver-check">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                    />
+                  </svg>
+                </div>
+                <h4>Networking opportunities</h4>
+              </div>
+              <div class="deliver-card-body">
+                <p>
+                  connecting investors, innovators, and digital transformation
+                  leaders
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== LAUNCHING BANNER ===== -->
+      <div class="launching-banner">
+        <p>Launching the <strong>Next Era of Intelligent Shipping</strong></p>
+      </div>
+
+      <!-- ===== WHY NOW ===== -->
+      <div class="why-section">
+        <div class="why-image-wrapper">
+          <div class="why-img-shape">
+            <img
+              src="./assets/images/AITECH E-ships-container.png"
+              alt="Shipping"
+            />
+          </div>
+          <div class="why-banner">
+            <div class="icon-circle">〉</div>
+            <span>Why now?</span>
+          </div>
+          <div class="why-banner-line"></div>
+        </div>
+        <div class="why-content">
+          <p>
+            The maritime sector is entering a major transformation era. With new
+            IMO digital regulations, increasing adoption of smart systems, &
+            global focus on efficiency & decarbonization, AI is now becoming
+            essential rather than optional.
+            <span class="name-highlight">TMS AITECH 2026</span> has been
+            launched to help the industry navigate this shift with clarity,
+            strategic direction, and collaboration.
+          </p>
+        </div>
+      </div>
+
+      <!-- ===== SPONSORS ===== -->
+      <div class="sponsors-section">
+        <div class="sponsors-title">OUR SPONSORS</div>
+        <div class="sponsors-grid">
+          <!-- Left: Platinum Card -->
+          <div class="sponsor-card-platinum">
+            <span class="sponsor-label" style="margin-bottom: 8px"
+              >Platinum Sponsor</span
+            >
+            <img
+              src="./assets/images/dry dockworld-LOGO.png"
+              alt="Drydocks World"
+              style="width: 170px; height: auto"
+            />
+          </div>
+
+          <!-- Right: Multiple Sponsors Card -->
+          <div class="sponsor-card-group">
+            <div class="sponsor-item">
+              <span class="sponsor-label">Notepads &amp; Pens</span>
+              <img
+                src="./assets/images/aiss-LOGO.png"
+                alt="AISS"
+                style="width: 120px; height: auto"
+              />
+            </div>
+
+            <div class="sponsor-item">
+              <span class="sponsor-label">Multimedia</span>
+              <img
+                src="./assets/images/shipping-LOGO.png"
+                alt="TCM Shipping"
+                style="width: 55px; height: auto"
+              />
+            </div>
+
+            <div class="sponsor-item">
+              <span class="sponsor-label">Drink Reception</span>
+              <img
+                src="./assets/images/saifee-LOGO.png"
+                alt="SAIFEE"
+                style="width: 50px; height: auto"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="sponsors-bottom-line"></div>
+      </div>
+
+      <!-- ===== CTA TEXT ===== -->
+      <div class="cta-section">
+        <p>
+          Be part of the
+          <span class="highlight">next era of maritime innovation</span>.<br />
+          Updates on speakers, agenda, sponsorship opportunities, and<br />exclusive
+          insights will be shared soon.
+        </p>
+      </div>
+
+      <!-- ===== FOOTER BOOK NOW ===== -->
+      <div style="background-color: #ffffff; padding: 40px 40px 0 40px">
+        <div class="footer-cta">
+          <div class="footer-cta-text">
+            Let's advance towards a<br />
+            more intelligent and<br />
+            connected<span> maritime future.</span>
+          </div>
+
+          <div class="footer-right">
+            <span class="book-label">BOOK NOW</span>
+            <a href="https://www.tmsaitech.com" class="book-btn-new">
+              <div class="book-arrow-circle">›</div>
+              <span class="book-btn-url">www.tmsaitech.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
