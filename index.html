@@ -14,15 +14,24 @@
         padding: 0;
         box-sizing: border-box;
       }
+      table {
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
       body {
         font-family: "Roboto", sans-serif;
         background: #0a0a1a;
-        display: flex;
-        justify-content: center;
+        margin: 0;
         padding: 20px 0;
+        width: 100%;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
       }
       .email-wrapper {
         width: 650px;
+        max-width: 100%;
+        margin: 0 auto;
         background: #0d0d2b;
         overflow: hidden;
       }
@@ -30,8 +39,9 @@
       /* ===== HERO SECTION ===== */
       .hero {
         position: relative;
-        background: #050510 url("assets/images/AITECH-E-image.jpeg") no-repeat
-          center center / cover;
+        background: #050510
+          url("https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH-E-image.jpeg")
+          no-repeat center center / cover;
         padding: 40px 30px 50px;
         text-align: center;
         overflow: hidden;
@@ -90,7 +100,6 @@
       .tms-brand {
         display: inline-flex;
         align-items: center;
-        gap: 2px;
         margin-bottom: 4px;
       }
       .tms-brand span {
@@ -108,15 +117,8 @@
         letter-spacing: 6px;
         line-height: 1;
         margin: 8px 0;
-        background: linear-gradient(
-          135deg,
-          #5da0f9 0%,
-          #76399b 50%,
-          #5da0f9 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: #5da0f9;
+
         text-shadow: none;
         filter: drop-shadow(0 0 30px rgba(93, 160, 249, 0.4));
       }
@@ -161,7 +163,6 @@
         flex: 1;
         display: flex;
         align-items: center;
-        gap: 12px;
         padding: 5px 15px;
       }
       .info-item:not(:last-child) {
@@ -173,7 +174,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-shrink: 0;
+        margin-right: 12px;
       }
       .info-icon svg {
         width: 100%;
@@ -228,10 +229,7 @@
         font-weight: 700;
         letter-spacing: 1.5px;
         margin: 5px 0;
-        background: linear-gradient(to right, #76399b, #5da0f9);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: #76399b;
         display: inline-block;
         text-decoration: none;
       }
@@ -269,8 +267,8 @@
 
       /* Gradient Band (Forum Section) */
       .forum-section {
-        background: url("assets/images/AITECH bg-gradient.png") no-repeat center
-          center;
+        background: url("https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20bg-gradient.png")
+          no-repeat center center;
         background-color: #fff;
         background-size: cover;
         padding: 45px 50px;
@@ -309,8 +307,9 @@
 
       /* ===== WHAT AITECH DELIVERS ===== */
       .delivers-section {
-        background: #050b1f url("assets/images/AITECH delivers-bg.png") center
-          center / cover;
+        background: #050b1f
+          url("https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20delivers-bg.png")
+          center center / cover;
         padding: 50px 30px;
         position: relative;
         overflow: hidden;
@@ -355,15 +354,14 @@
 
       .delivers-grid {
         display: flex;
-        gap: 12px;
         justify-content: center;
         align-items: stretch;
       }
       .deliver-card {
         flex: 1;
+        margin: 0 6px;
         display: flex;
         flex-direction: column;
-        gap: 0;
         text-decoration: none;
       }
       .deliver-card-top {
@@ -385,7 +383,7 @@
         right: -12px;
         width: 32px;
         height: 32px;
-        background: #ffffff;
+
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -436,8 +434,8 @@
 
       /* ===== LAUNCHING SECTION ===== */
       .launching-banner {
-        background: url("assets/images/AITECH launch-bg.png") no-repeat center
-          center / cover;
+        background: url("https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20launch-bg.png")
+          no-repeat center center / cover;
         padding: 22px 30px;
         text-align: center;
       }
@@ -458,14 +456,13 @@
         padding: 50px 45px 10px 45px;
         display: flex;
         align-items: center;
-        gap: 35px;
         overflow: visible;
       }
       .why-image-wrapper {
         position: relative;
         width: 320px;
         flex-shrink: 0;
-        margin-bottom: 20px;
+        margin-right: 35px;
         text-decoration: none;
         display: block;
       }
@@ -490,7 +487,6 @@
         padding: 5px 60px 4px 5px;
         display: flex;
         align-items: center;
-        gap: 10px;
         /* border-radius: 0 100px 100px 0; */
         z-index: 0;
         box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.2);
@@ -512,8 +508,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #5d1a8a;
-        flex-shrink: 0;
+        margin-right: 10px;
       }
       .why-banner .icon-circle svg {
         width: 16px;
@@ -583,6 +578,9 @@
         gap: 20px;
         font-family: "Roboto", sans-serif;
       }
+      .sponsors-title span {
+        margin: 0 20px;
+      }
       .sponsors-title::before,
       .sponsors-title::after {
         content: "";
@@ -600,7 +598,6 @@
 
       .sponsors-grid {
         display: flex;
-        gap: 20px;
         align-items: stretch;
       }
 
@@ -630,6 +627,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 20px;
       }
 
       .sponsor-item {
@@ -637,7 +639,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        margin: 0 7px;
         text-align: center;
       }
 
@@ -743,7 +745,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
         border-radius: 50px 50px 0 0;
         margin: 0;
       }
@@ -754,10 +755,10 @@
         font-weight: 700;
         line-height: 1.3;
         flex: 1;
+        margin-right: 20px;
       }
       .footer-cta-text span {
         background: linear-gradient(to right, #ffffff, #9ea2fa, #f674c6);
-
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -783,7 +784,6 @@
       .book-btn-new {
         display: flex;
         align-items: center;
-        gap: 15px;
         background: transparent;
         border: 2px solid transparent; /* Space for gradient border */
         border-radius: 30px;
@@ -808,7 +808,7 @@
         justify-content: center;
         color: #4a0e78;
         font-size: 18px;
-        font-weight: 900;
+        margin-right: 15px;
       }
 
       .book-btn-url {
@@ -940,6 +940,16 @@
         .footer-cta-text {
           font-size: 20px !important;
         }
+        .footer-cta-text span {
+          font-size: 20px !important;
+          background: linear-gradient(to right, #ffffff, #9ea2fa, #f674c6);
+
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+          font-weight: 700;
+        }
         .footer-right {
           width: 100%;
           align-items: center;
@@ -959,7 +969,7 @@
           <div class="tms-logo-area">
             <a href="https://tmsaitechconference.com/">
               <img
-                src="assets/images/AITECH E-LOGO.png"
+                src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20E-LOGO.png"
                 alt="TMS AITECH Conference Logo"
                 style="
                   max-width: 320px;
@@ -981,11 +991,13 @@
               <!-- Date -->
               <div class="info-item">
                 <div class="info-icon">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M19,4H18V2H16V4H8V2H6V4H5C3.89,4 3.01,4.9 3.01,6L3,20C3,21.1 3.89,22 5,22H19C20.1,22 21,21.1 21,20V6C21,4.9 20.1,4 19,4M19,20H5V10H19V20M19,8H5V6H19V8M7,12H9V14H7V12M11,12H13V14H11V12M15,12H17V14H15V12Z"
-                    />
-                  </svg>
+                  <img
+                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/calander-icon.png"
+                    alt="Calendar"
+                    width="24"
+                    height="24"
+                    style="display: block; width: 24px; height: 24px; border: 0"
+                  />
                 </div>
                 <div class="info-text">
                   <span class="info-label">Date:</span>
@@ -995,11 +1007,13 @@
               <!-- Time -->
               <div class="info-item">
                 <div class="info-icon">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
-                    />
-                  </svg>
+                  <img
+                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/clock-icon.png"
+                    alt="Clock"
+                    width="24"
+                    height="24"
+                    style="display: block; width: 24px; height: 24px; border: 0"
+                  />
                 </div>
                 <div class="info-text">
                   <span class="info-label">Time:</span>
@@ -1009,11 +1023,13 @@
               <!-- Venue -->
               <div class="info-item">
                 <div class="info-icon">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M12,2C8.13,2 5,5.13 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9C19,5.13 15.87,2 12,2M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5Z"
-                    />
-                  </svg>
+                  <img
+                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/location-icon.png"
+                    alt="Location"
+                    width="24"
+                    height="24"
+                    style="display: block; width: 24px; height: 24px; border: 0"
+                  />
                 </div>
                 <div class="info-text">
                   <span class="info-label">Venue:</span>
@@ -1085,11 +1101,13 @@
             <a href="https://tmsaitechconference.com/" class="deliver-card">
               <div class="deliver-card-top">
                 <div class="deliver-check">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-                    />
-                  </svg>
+                  <img
+                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
+                    alt="▼"
+                    width="18"
+                    height="18"
+                    style="display: block; width: 45px; height: 35px; border: 0"
+                  />
                 </div>
                 <h4>High-level conference sessions</h4>
               </div>
@@ -1105,11 +1123,13 @@
             <a href="https://tmsaitechconference.com/" class="deliver-card">
               <div class="deliver-card-top">
                 <div class="deliver-check">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-                    />
-                  </svg>
+                  <img
+                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
+                    alt="▼"
+                    width="18"
+                    height="18"
+                    style="display: block; width: 45px; height: 35px; border: 0"
+                  />
                 </div>
                 <h4>Case Studies</h4>
               </div>
@@ -1125,11 +1145,13 @@
             <a href="https://tmsaitechconference.com/" class="deliver-card">
               <div class="deliver-card-top">
                 <div class="deliver-check">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-                    />
-                  </svg>
+                  <img
+                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
+                    alt="▼"
+                    width="18"
+                    height="18"
+                    style="display: block; width: 45px; height: 35px; border: 0"
+                  />
                 </div>
                 <h4>In-depth discussions</h4>
               </div>
@@ -1146,11 +1168,13 @@
             <a href="https://tmsaitechconference.com/" class="deliver-card">
               <div class="deliver-card-top">
                 <div class="deliver-check">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-                    />
-                  </svg>
+                  <img
+                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
+                    alt="▼"
+                    width="18"
+                    height="18"
+                    style="display: block; width: 45px; height: 35px; border: 0"
+                  />
                 </div>
                 <h4>Exclusive industry reports & insights</h4>
               </div>
@@ -1163,11 +1187,13 @@
             <a href="https://tmsaitechconference.com/" class="deliver-card">
               <div class="deliver-card-top">
                 <div class="deliver-check">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-                    />
-                  </svg>
+                  <img
+                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
+                    alt="▼"
+                    width="18"
+                    height="18"
+                    style="display: block; width: 45px; height: 35px; border: 0"
+                  />
                 </div>
                 <h4>Networking opportunities</h4>
               </div>
@@ -1189,84 +1215,184 @@
 
       <!-- ===== WHY NOW ===== -->
       <div class="why-section">
-        <a href="https://tmsaitechconference.com/" class="why-image-wrapper">
-          <div class="why-img-shape">
-            <img
-              src="./assets/images/AITECH E-ships-container.png"
-              alt="TMS AITECH Conference Shipping"
-            />
-          </div>
-          <div class="why-banner">
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
-                />
-              </svg>
-            </div>
-            <span>Why now?</span>
-          </div>
-          <div class="why-banner-line"></div>
-        </a>
-        <div class="why-content">
-          <p>
-            The maritime sector is entering a major transformation era. With new
-            IMO digital regulations, increasing adoption of smart systems, &
-            global focus on efficiency & decarbonization, AI is now becoming
-            essential rather than optional.
-            <span class="name-highlight">TMS AITECH 2026</span> has been
-            launched to help the industry navigate this shift with clarity,
-            strategic direction, and collaboration.
-          </p>
-        </div>
+        <table
+          width="100%"
+          border="0"
+          cellspacing="0"
+          cellpadding="0"
+          role="presentation"
+        >
+          <tr>
+            <td
+              width="350"
+              valign="top"
+              class="why-img-col"
+              style="padding-right: 35px"
+            >
+              <a
+                href="https://tmsaitechconference.com/"
+                class="why-image-wrapper"
+                style="
+                  display: block;
+                  text-decoration: none;
+                  position: relative;
+                "
+              >
+                <div class="why-img-shape">
+                  <img
+                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20E-ships-container.png"
+                    alt="TMS AITECH Conference Shipping"
+                    width="350"
+                    style="
+                      display: block;
+                      width: 100%;
+                      border-radius: 0 40px 0 0;
+                    "
+                  />
+                </div>
+                <div class="why-banner">
+                  <div class="icon-circle">
+                    <img
+                      src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/right-arrow.png"
+                      alt="›"
+                      width="16"
+                      height="16"
+                      style="
+                        display: block;
+                        width: 16px;
+                        height: 16px;
+                        border: 0;
+                      "
+                    />
+                  </div>
+                  <span>Why now?</span>
+                </div>
+                <!-- <div class="why-banner-line"></div> -->
+              </a>
+            </td>
+            <td valign="middle" class="why-text-col">
+              <div class="why-content">
+                <p>
+                  The maritime sector is entering a major transformation era.
+                  With new IMO digital regulations, increasing adoption of smart
+                  systems, & global focus on efficiency & decarbonization, AI is
+                  now becoming essential rather than optional.
+                  <span class="name-highlight">TMS AITECH 2026</span> has been
+                  launched to help the industry navigate this shift with
+                  clarity, strategic direction, and collaboration.
+                </p>
+              </div>
+            </td>
+          </tr>
+        </table>
       </div>
 
       <!-- ===== SPONSORS ===== -->
       <div class="sponsors-section">
         <div class="sponsors-title">OUR SPONSORS</div>
-        <div class="sponsors-grid">
-          <!-- Left: Platinum Card -->
-          <div class="sponsor-card-platinum">
-            <span class="sponsor-label" style="margin-bottom: 8px"
-              >Platinum Sponsor</span
-            >
-            <img
-              src="./assets/images/dry dockworld-LOGO.png"
-              alt="Drydocks World"
-              style="width: 170px; height: auto"
-            />
-          </div>
 
-          <!-- Right: Multiple Sponsors Card -->
-          <div class="sponsor-card-group">
-            <div class="sponsor-item">
-              <span class="sponsor-label">Notepads &amp; Pens</span>
-              <img
-                src="./assets/images/aiss-LOGO.png"
-                alt="AISS"
-                style="width: 120px; height: auto"
-              />
-            </div>
+        <table
+          width="100%"
+          border="0"
+          cellspacing="0"
+          cellpadding="0"
+          role="presentation"
+        >
+          <tr>
+            <!-- Left: Platinum Card -->
+            <td width="35%" valign="top" style="padding-right: 10px">
+              <div class="sponsor-card-platinum">
+                <span
+                  class="sponsor-label"
+                  style="display: block; margin-bottom: 8px"
+                  >Platinum Sponsor</span
+                >
+                <img
+                  src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/dry%20dockworld-LOGO.png"
+                  alt="Drydocks World"
+                  width="170"
+                  style="
+                    width: 100%;
+                    max-width: 170px;
+                    height: auto;
+                    display: block;
+                  "
+                />
+              </div>
+            </td>
 
-            <div class="sponsor-item">
-              <span class="sponsor-label">Multimedia</span>
-              <img
-                src="./assets/images/shipping-LOGO.png"
-                alt="TCM Shipping"
-                style="width: 55px; height: auto"
-              />
-            </div>
+            <!-- Right: Multiple Sponsors Card -->
+            <td width="65%" valign="top" style="padding-left: 10px">
+              <div class="sponsor-card-group">
+                <table
+                  width="100%"
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                >
+                  <tr>
+                    <td align="center" valign="middle" width="33%">
+                      <div class="sponsor-item">
+                        <span class="sponsor-label" style="display: block"
+                          >Notepads &amp; Pens</span
+                        >
+                        <img
+                          src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/aiss-LOGO.png"
+                          alt="AISS"
+                          width="120"
+                          style="
+                            width: 100%;
+                            max-width: 120px;
+                            height: auto;
+                            display: block;
+                          "
+                        />
+                      </div>
+                    </td>
+                    <td align="center" valign="middle" width="33%">
+                      <div class="sponsor-item">
+                        <span class="sponsor-label" style="display: block"
+                          >Multimedia</span
+                        >
+                        <img
+                          src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/shipping-LOGO.png"
+                          alt="TCM Shipping"
+                          width="55"
+                          style="
+                            width: 100%;
+                            max-width: 55px;
+                            height: auto;
+                            display: block;
+                          "
+                        />
+                      </div>
+                    </td>
+                    <td align="center" valign="middle" width="33%">
+                      <div class="sponsor-item">
+                        <span class="sponsor-label" style="display: block"
+                          >Drink Reception</span
+                        >
+                        <img
+                          src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/saifee-LOGO.png"
+                          alt="SAIFEE"
+                          width="50"
+                          style="
+                            width: 100%;
+                            max-width: 50px;
+                            height: auto;
+                            display: block;
+                          "
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
 
-            <div class="sponsor-item">
-              <span class="sponsor-label">Drink Reception</span>
-              <img
-                src="./assets/images/saifee-LOGO.png"
-                alt="SAIFEE"
-                style="width: 50px; height: auto"
-              />
-            </div>
-          </div>
-        </div>
         <div class="sponsors-bottom-line"></div>
       </div>
 
@@ -1283,19 +1409,50 @@
       <!-- ===== FOOTER BOOK NOW ===== -->
       <div style="background-color: #ffffff; padding: 40px 40px 0 40px">
         <div class="footer-cta">
-          <div class="footer-cta-text">
-            Let's advance towards a<br />
-            more intelligent and<br />
-            connected<span> maritime future.</span>
-          </div>
-
-          <div class="footer-right">
-            <span class="book-label">BOOK NOW</span>
-            <a href="https://tmsaitechconference.com" class="book-btn-new">
-              <div class="book-arrow-circle">›</div>
-              <span class="book-btn-url">www.tmsaitechconference.com</span>
-            </a>
-          </div>
+          <table
+            width="100%"
+            border="0"
+            cellspacing="0"
+            cellpadding="0"
+            role="presentation"
+          >
+            <tr>
+              <td valign="middle" class="footer-cta-text">
+                Let's advance towards a<br />
+                more intelligent and<br />
+                connected<span> maritime future.</span>
+              </td>
+              <td valign="middle" align="right" class="footer-right-col">
+                <div class="footer-right">
+                  <span class="book-label" style="display: block"
+                    >BOOK NOW</span
+                  >
+                  <a
+                    href="https://tmsaitechconference.com"
+                    class="book-btn-new"
+                  >
+                    <div class="book-arrow-circle">
+                      <img
+                        src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/right-arrow.png"
+                        alt="›"
+                        width="14"
+                        height="14"
+                        style="
+                          display: block;
+                          width: 14px;
+                          height: 14px;
+                          border: 0;
+                        "
+                      />
+                    </div>
+                    <span class="book-btn-url"
+                      >www.tmsaitechconference.com</span
+                    >
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
