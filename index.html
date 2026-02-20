@@ -1,1329 +1,632 @@
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>TMS AITECH 2026 - Maritime 4.0 and Beyond</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG />
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
     <style>
-      * {
+      body {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-      }
-      table {
-        border-collapse: collapse;
-        mso-table-lspace: 0pt;
-        mso-table-rspace: 0pt;
-      }
-      body {
-        font-family: "Roboto", sans-serif;
-        background: #0a0a1a;
-        margin: 0;
-        padding: 20px 0;
         width: 100%;
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
       }
-      .email-wrapper {
-        width: 650px;
-        max-width: 100%;
-        margin: 0 auto;
-        background: #0d0d2b;
-        overflow: hidden;
+      table {
+        /* border-collapse: collapse; */
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
       }
-
-      /* ===== HERO SECTION ===== */
-      .hero {
-        position: relative;
-        background: #050510
-          url("https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH-E-image.jpeg")
-          no-repeat center center / cover;
-        padding: 40px 30px 50px;
-        text-align: center;
-        overflow: hidden;
-      }
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        /* background: rgba(
-          5,
-          5,
-          16,
-          0.7
-        ); */
-        /* Dark overlay to keep text readable */
-        z-index: 1;
-      }
-      /* Grid/circuit lines overlay */
-      .hero::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image:
-          linear-gradient(rgba(93, 160, 249, 0.04) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(93, 160, 249, 0.04) 1px, transparent 1px);
-        background-size: 40px 40px;
-        pointer-events: none;
-        z-index: 1;
-      }
-      .hero-content {
-        position: relative;
-        z-index: 2;
-      }
-
-      .tms-logo-area {
-        margin-bottom: 16px;
-      }
-      .tms-text {
-        font-size: 11px;
-        letter-spacing: 3px;
-        color: rgba(255, 255, 255, 0.7);
-        text-transform: uppercase;
-        font-weight: 400;
-      }
-      .tms-star {
-        color: #5da0f9;
-        font-size: 18px;
-        margin: 0 4px;
-      }
-      .tms-brand {
-        display: inline-flex;
-        align-items: center;
-        margin-bottom: 4px;
-      }
-      .tms-brand span {
-        font-family: "Roboto", sans-serif;
-        font-size: 13px;
-        letter-spacing: 4px;
-        color: rgba(255, 255, 255, 0.8);
-        text-transform: uppercase;
-      }
-
-      .aitech-logo {
-        font-family: "Roboto", sans-serif;
-        font-size: 80px;
-        font-weight: 700;
-        letter-spacing: 6px;
-        line-height: 1;
-        margin: 8px 0;
-        color: #5da0f9;
-
-        text-shadow: none;
-        filter: drop-shadow(0 0 30px rgba(93, 160, 249, 0.4));
-      }
-
-      .subtitle-line1 {
-        font-family: "Roboto", sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-        /* background: linear-gradient(to right, #ffffff, #5159ee, #fa47b8);
-
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent; */
-        color: #fff;
-        letter-spacing: 1px;
-        margin-top: 14px;
-      }
-      .subtitle-line2 {
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.8);
-        letter-spacing: 1px;
-        margin-top: 3px;
-      }
-
-      /* Info Bar */
-      .info-bar-border {
-        margin-top: 40px;
-        padding: 2.5px;
-        background: linear-gradient(to right, #76399b, #5da0f9);
-        border-radius: 100px;
-      }
-      .info-bar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: rgba(13, 13, 43, 0.4);
-        border-radius: 100px;
-        padding: 12px 20px;
-      }
-      .info-item {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        padding: 5px 15px;
-      }
-      .info-item:not(:last-child) {
-        border-right: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .info-icon {
-        width: 24px;
-        height: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 12px;
-      }
-      .info-icon svg {
-        width: 100%;
-        height: 100%;
-        fill: #ffffff;
-      }
-      .info-text {
-        text-align: left;
-      }
-      .info-label {
-        font-family: "Montserrat", sans-serif;
-        font-size: 13px;
-        background: linear-gradient(to right, #ffffff, #76adf5, #c778f9);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        font-weight: 700;
-        display: inline-block;
-        line-height: 1.1;
-      }
-      .info-value {
-        font-family: "Montserrat", sans-serif;
-
-        font-size: 11px;
-        color: rgba(255, 255, 255, 0.8);
-        font-weight: 400;
-        display: block;
-        margin-top: 2px;
-        line-height: 1.1;
-      }
-
-      /* ===== LAUNCH SECTION ===== */
-      .launch-section {
-        background: #ffffff;
-        padding: 50px 50px 10px;
-        text-align: center;
-      }
-      .launch-section p.intro {
-        font-size: 16px;
-        color: #777;
-        line-height: 1.4;
-        margin-bottom: 5px;
-      }
-      .launch-section p.intro strong {
-        color: #000;
-        font-weight: 700;
-      }
-      .launch-title {
-        font-family: "Roboto", sans-serif;
-        font-size: 34px;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        margin: 5px 0;
-        color: #76399b;
-        display: inline-block;
+      img {
+        border: 0;
+        outline: none;
         text-decoration: none;
-      }
-      .launch-sub {
-        font-size: 15px;
-        color: #666;
-        line-height: 1.6;
-        margin: 10px auto;
-        max-width: 550px;
-      }
-
-      /* Theme Section */
-      .theme-container {
-        background: #ffffff;
-        padding: 7px 50px 4px;
-        text-align: center;
-      }
-      .theme-header {
-        font-size: 16px;
-        color: #777;
-        margin-bottom: 8px;
-        line-height: 1.4;
-      }
-      .theme-header strong {
-        color: #000;
-        font-weight: 700;
-      }
-      .theme-desc {
-        font-size: 15px;
-        color: #666;
-        line-height: 1.6;
-        margin: 5px auto;
-        max-width: 600px;
-      }
-
-      /* Gradient Band (Forum Section) */
-      .forum-section {
-        background: url("https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20bg-gradient.png")
-          no-repeat center center;
-        background-color: #fff;
-        background-size: cover;
-        padding: 45px 50px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-      .forum-section::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: repeating-linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.05) 0px,
-          rgba(255, 255, 255, 0.05) 1px,
-          transparent 1px,
-          transparent 40px
-        );
-        pointer-events: none;
-      }
-      .forum-section p {
-        font-size: 16px;
-        color: #ffffff;
-        line-height: 1.6;
-        font-weight: 600;
-        position: relative;
-        z-index: 1;
-        margin: 0;
-      }
-      .forum-section p strong {
-        font-weight: 800;
-      }
-
-      /* ===== WHAT AITECH DELIVERS ===== */
-      .delivers-section {
-        background: #050b1f
-          url("https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20delivers-bg.png")
-          center center / cover;
-        padding: 50px 30px;
-        position: relative;
-        overflow: hidden;
-      }
-      .delivers-inner {
-        position: relative;
-        z-index: 1;
-      }
-      .delivers-title-wrap {
-        text-align: center;
-        margin-bottom: 50px;
-      }
-      .delivers-pill {
-        display: inline-block;
-        /* Inner bg matches site theme dark blue/purple */
-        background:
-          linear-gradient(rgba(13, 13, 43, 0.9), rgba(13, 13, 43, 0.9))
-            padding-box,
-          linear-gradient(180deg, #73a9f0 0%, #ff33ff 100%) border-box;
-        border: 3px solid transparent;
-        border-radius: 50px;
-        padding: 15px 45px;
-        font-family: "Roboto", sans-serif;
-        font-size: 24px;
-        font-weight: 700;
-        color: #ffffff;
-        letter-spacing: 1px;
-        /* Shadows: Sharp bright glow at top, Deep pink glow at bottom */
-        box-shadow:
-          0 -2px 10px rgba(93, 160, 249, 0.8),
-          /* Focused Top Glow */ 0 -8px 25px rgba(93, 160, 249, 0.4),
-          /* Diffuse Top Glow */ 0 2px 10px rgba(246, 116, 198, 0.8),
-          /* Focused Bottom Glow */ 0 8px 25px rgba(246, 116, 198, 0.4),
-          /* Diffuse Bottom Glow */ inset 0 0 20px rgba(93, 160, 249, 0.1); /* Inner Glassiness */
-      }
-      .delivers-pill span {
-        background: linear-gradient(to right, #ffffff, #9ea2fa, #f674c6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .delivers-grid {
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-      }
-      .deliver-card {
-        flex: 1;
-        margin: 0 6px;
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-      }
-      .deliver-card-top {
-        background: linear-gradient(180deg, #76399b, #5da0f9);
-        border-radius: 20px;
-        padding: 20px 10px;
-        text-align: center;
-        position: relative;
-        min-height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 2;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      }
-      .deliver-check {
-        position: absolute;
-        top: -12px;
-        right: -12px;
-        width: 32px;
-        height: 32px;
-
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        z-index: 5;
-      }
-      .deliver-check svg {
-        width: 18px;
-        height: 18px;
-        fill: #5da0f9;
-        stroke: #5da0f9;
-        stroke-width: 1;
-      }
-      .deliver-card-top h4 {
-        font-family: "Open Sans", sans-serif;
-        font-size: 13px;
-        font-weight: 800;
-        color: #ffffff;
-        line-height: 1.2;
-        margin: 0;
-      }
-      .deliver-card-body {
-        background: rgba(255, 255, 255, 0.05);
-        border: 2px solid rgba(255, 255, 255, 0.5);
-        border-top: none;
-        border-radius: 0 0 25px 25px;
-        padding: 45px 15px 35px;
-        margin-top: -25px;
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        backdrop-filter: blur(15px);
-        box-shadow:
-          inset 0 0 20px rgba(255, 255, 255, 0.1),
-          0 0 20px rgba(93, 160, 249, 0.15);
-      }
-      .deliver-card-body p {
-        font-size: 13px;
-        color: #ffffff;
-        line-height: 1.6;
-        text-align: center;
-        margin: 0;
-        font-weight: 500;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      }
-
-      /* ===== LAUNCHING SECTION ===== */
-      .launching-banner {
-        background: url("https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20launch-bg.png")
-          no-repeat center center / cover;
-        padding: 22px 30px;
-        text-align: center;
-      }
-      .launching-banner p {
-        font-size: 16px;
-        color: rgba(255, 255, 255, 0.9);
-        font-weight: 400;
-      }
-      .launching-banner strong {
-        font-style: italic;
-        color: #ffffff;
-        font-weight: 700;
-      }
-
-      /* Why Now Section */
-      .why-section {
-        background: #ffffff;
-        padding: 50px 45px 10px 45px;
-        display: flex;
-        align-items: center;
-        overflow: visible;
-      }
-      .why-image-wrapper {
-        position: relative;
-        width: 320px;
-        flex-shrink: 0;
-        margin-right: 35px;
-        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
         display: block;
       }
-      .why-img-shape {
-        width: 100%;
-        height: 280px;
-        z-index: 10;
-        overflow: hidden;
-        position: relative;
-      }
-      .why-img-shape img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-      .why-banner {
-        position: absolute;
-        bottom: 21px;
-        left: 0px;
-        background: #5d1a8a;
-        padding: 5px 60px 4px 5px;
-        display: flex;
-        align-items: center;
-        /* border-radius: 0 100px 100px 0; */
-        z-index: 0;
-        box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.2);
-      }
-      .why-banner-line {
-        position: absolute;
-        left: 50px;
-        top: 40px;
-        width: 2px;
-        height: 60px;
-        background: #ff33ff;
-        z-index: 5;
-      }
-      .why-banner .icon-circle {
-        width: 25px;
-        height: 25px;
-        background: #ffffff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-      }
-      .why-banner .icon-circle svg {
-        width: 16px;
-        height: 16px;
-        fill: #5d1a8a;
-      }
-      .why-banner span {
-        font-family: "Roboto", sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-        background: linear-gradient(to right, #ffffff, #9ea2fa, #f674c6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        white-space: nowrap;
-        /* background: rgba(255, 255, 255, 0.15); */
-        padding: 5px 10px;
-        border-radius: 30px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        margin-left: 5px;
-      }
-      .why-content {
-        flex: 1;
-      }
-      .why-content p {
-        font-family: "Roboto", sans-serif;
-        font-size: 12px;
-        color: #545454;
-        line-height: 1.7;
-        margin: 0;
-      }
-      .why-content .name-highlight {
-        background: linear-gradient(to right, #5058ef, #f674c6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        font-weight: 700;
-      }
-      .why-content .year-highlight {
-        color: #ff33ff;
-        font-weight: 700;
-      }
-
-      /* ===== SPONSORS ===== */
-      .sponsors-section {
-        background: #ffffff;
-        padding: 40px 45px;
-      }
-      .sponsors-title {
-        text-align: center;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 4px;
-        background: linear-gradient(to right, #f674c6, #434beb);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        text-transform: uppercase;
-        margin-bottom: 30px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        font-family: "Roboto", sans-serif;
-      }
-      .sponsors-title span {
-        margin: 0 20px;
-      }
-      .sponsors-title::before,
-      .sponsors-title::after {
-        content: "";
-        flex: 1;
-        height: 2px;
-        background: linear-gradient(90deg, #5058ef, #f674c6);
-        max-width: 250px;
-      }
-      .sponsors-title::before {
-        background: linear-gradient(to right, #5058ef, #f674c6);
-      }
-      .sponsors-title::after {
-        background: linear-gradient(to right, #5058ef, #f674c6);
-      }
-
-      .sponsors-grid {
-        display: flex;
-        align-items: stretch;
-      }
-
-      /* Platinum Card (Left) */
-      .sponsor-card-platinum {
-        flex: 0 0 35%;
-        background: linear-gradient(90deg, #def0ff 0%, #ebd1ff 100%);
-        border-radius: 30px;
-        padding: 6px 6px;
-        text-align: center;
-        border: none;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* Multi-Sponsor Card (Right) */
-      .sponsor-card-group {
-        flex: 1;
-        background: #efefef;
-        border-radius: 30px;
-        padding: 25px 20px;
-        border: none;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-left: 20px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-left: 20px;
-      }
-
-      .sponsor-item {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 7px;
-        text-align: center;
-      }
-
-      .sponsors-bottom-line {
-        margin-top: 40px;
-        height: 2px;
-        background: linear-gradient(to right, #5058ef, #f674c6);
-        width: 100%;
-        border-radius: 2px;
-      }
-
-      .sponsor-label {
-        font-size: 11px;
-        color: #666;
-        font-weight: 600;
-        margin-bottom: 10px;
-        font-family: "Roboto", sans-serif;
-      }
-      /* AISS logo */
-      .aiss-logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-      }
-      .aiss-emblem {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #1a1a4a, #2a2a6a);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 9px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-      }
-      .aiss-name {
-        font-size: 8px;
-        color: #333;
-        font-family: "Open Sans", sans-serif;
-      }
-      /* TCM Shipping */
-      .tcm-logo {
-        color: #cc0000;
-        font-size: 18px;
-        font-weight: 700;
-        letter-spacing: 1px;
-      }
-      .tcm-sub {
-        font-size: 7px;
-        color: #888;
-        font-family: "Open Sans", sans-serif;
-        display: block;
-      }
-      /* SAIFEE */
-      .saifee-logo {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #e63946, #1d3557);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        color: #fff;
-        font-size: 9px;
-        font-weight: 700;
-      }
-
-      /* ===== CTA SECTION ===== */
-      .cta-section {
-        background: #ffffff;
-        padding: 24px 40px 0px 30px;
-        text-align: center;
-      }
-      .cta-section p {
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        color: #333;
-        line-height: 1.2;
-      }
-      .cta-section a {
-        color: #5da0f9;
+      a {
         text-decoration: none;
-        font-weight: 700;
-      }
-      .cta-section .highlight {
-        background: linear-gradient(to right, #f674c6, #434beb);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        font-style: italic;
-        font-weight: 700;
-      }
-
-      /* ===== FOOTER CTA BAND ===== */
-      .footer-cta {
-        background: linear-gradient(90deg, #050e66 0%, #4b0b73 100%);
-        padding: 40px 30px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 50px 50px 0 0;
-        margin: 0;
-      }
-      .footer-cta-text {
-        font-size: 18px;
-        color: #ffffff;
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        line-height: 1.3;
-        flex: 1;
-        margin-right: 20px;
-      }
-      .footer-cta-text span {
-        background: linear-gradient(to right, #ffffff, #9ea2fa, #f674c6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        font-weight: 700;
-      }
-
-      .footer-right {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .book-label {
-        font-size: 10px;
-        color: rgba(255, 255, 255, 0.7);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-family: "Roboto", sans-serif;
-      }
-
-      .book-btn-new {
-        display: flex;
-        align-items: center;
-        background: transparent;
-        border: 2px solid transparent; /* Space for gradient border */
-        border-radius: 30px;
-        padding: 5px 25px 5px 5px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        /* Simulate gradient border with double background */
-        background-image:
-          linear-gradient(#4b0b73, #4b0b73),
-          linear-gradient(to right, #ffffff, #3a42e9, #f640b3);
-        background-origin: border-box;
-        background-clip: padding-box, border-box;
-      }
-
-      .book-arrow-circle {
-        width: 35px;
-        height: 35px;
-        background: #ffffff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #4a0e78;
-        font-size: 18px;
-        margin-right: 15px;
-      }
-
-      .book-btn-url {
-        font-size: 14px;
-        color: #ffffff;
-        font-weight: 700;
-        font-family: "Roboto", sans-serif;
-        letter-spacing: 0.5px;
-      }
-      @media screen and (max-width: 420px) {
-        .book-btn-url {
-          font-size: 9.5px;
-        }
-        .book-arrow-circle {
-          width: 20px;
-          height: 20px;
-          font-size: 10px;
-        }
-        .book-btn-new {
-          gap: 1;
-          padding: 5px 15px 5px 5px;
-        }
-        .why-banner {
-          bottom: 2px;
-        }
-
-        .forum-section {
-          padding: 25px 33px;
-        }
-        .forum-section p {
-          font-size: 10px;
-        }
-
-        .icon-circle {
-          width: 20px;
-          height: 20px;
-        }
-        .why-banner .icon-circle svg {
-          width: 12px;
-          height: 12px;
-        }
-      }
-
-      /* MEDIA QUERIES FOR RESPONSIVENESS */
-      @media screen and (max-width: 600px) {
-        .email-wrapper {
-          width: 100% !important;
-        }
-        .hero {
-          padding: 30px 20px 40px !important;
-        }
-        .aitech-logo {
-          font-size: 60px !important;
-        }
-        .subtitle-line1 {
-          font-size: 12px !important;
-        }
-        .info-bar-border {
-          border-radius: 40px;
-          background: transparent;
-          padding: 0;
-        }
-        .info-bar {
-          flex-direction: column;
-          gap: 0;
-          padding: 30px !important;
-          border-radius: 40px;
-          background: linear-gradient(
-            135deg,
-            rgba(80, 24, 120, 0.9),
-            rgba(40, 60, 160, 0.9)
-          );
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        .info-item {
-          width: 100%;
-          border-right: none !important;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          padding: 20px 0 !important;
-          justify-content: center;
-          gap: 20px;
-        }
-        .info-item:last-child {
-          border-bottom: none;
-          padding-bottom: 0 !important;
-        }
-        .info-item:first-child {
-          padding-top: 0 !important;
-        }
-        .info-text {
-          text-align: left;
-        }
-        .info-label {
-          font-size: 16px;
-        }
-        .info-value {
-          font-size: 14px;
-        }
-        .info-icon {
-          width: 32px;
-          height: 32px;
-        }
-        .delivers-grid {
-          flex-direction: column;
-        }
-        .sponsors-grid {
-          flex-direction: column;
-        }
-        .sponsor-card-platinum {
-          flex: auto !important;
-        }
-        .why-section {
-          flex-direction: column;
-          padding: 40px 20px !important;
-        }
-        .why-image-wrapper {
-          width: 100% !important;
-          margin-bottom: 30px;
-        }
-        .why-img-shape {
-          height: 200px !important;
-        }
-        .footer-cta {
-          flex-direction: column;
-          text-align: center;
-          padding: 30px 20px !important;
-          gap: 30px;
-        }
-        .footer-cta-text {
-          font-size: 20px !important;
-        }
-        .footer-cta-text span {
-          font-size: 20px !important;
-          background: linear-gradient(to right, #ffffff, #9ea2fa, #f674c6);
-
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          color: transparent;
-          font-weight: 700;
-        }
-        .footer-right {
-          width: 100%;
-          align-items: center;
-        }
-        .book-btn-new {
-          width: 100%;
-          justify-content: center;
-        }
       }
     </style>
   </head>
-  <body>
-    <div class="email-wrapper">
-      <!-- ===== HERO ===== -->
-      <div class="hero">
-        <div class="hero-content">
-          <div class="tms-logo-area">
-            <a href="https://tmsaitechconference.com/">
-              <img
-                src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20E-LOGO.png"
-                alt="TMS AITECH Conference Logo"
-                style="
-                  max-width: 320px;
-                  height: auto;
-                  display: block;
-                  margin: 0 auto;
-                  padding-bottom: 5px;
-                  border: 0;
-                "
-              />
-            </a>
-          </div>
-
-          <div class="subtitle-line1">Maritime 4.0 and Beyond:</div>
-          <div class="subtitle-line2">Accelerating Intelligence in Motion</div>
-
-          <div class="info-bar-border">
-            <div class="info-bar">
-              <!-- Date -->
-              <div class="info-item">
-                <div class="info-icon">
-                  <img
-                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/calander-icon.png"
-                    alt="Calendar"
-                    width="24"
-                    height="24"
-                    style="display: block; width: 24px; height: 24px; border: 0"
-                  />
-                </div>
-                <div class="info-text">
-                  <span class="info-label">Date:</span>
-                  <span class="info-value">April 14, 2026</span>
-                </div>
-              </div>
-              <!-- Time -->
-              <div class="info-item">
-                <div class="info-icon">
-                  <img
-                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/clock-icon.png"
-                    alt="Clock"
-                    width="24"
-                    height="24"
-                    style="display: block; width: 24px; height: 24px; border: 0"
-                  />
-                </div>
-                <div class="info-text">
-                  <span class="info-label">Time:</span>
-                  <span class="info-value">14:30 – 18:00</span>
-                </div>
-              </div>
-              <!-- Venue -->
-              <div class="info-item">
-                <div class="info-icon">
-                  <img
-                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/location-icon.png"
-                    alt="Location"
-                    width="24"
-                    height="24"
-                    style="display: block; width: 24px; height: 24px; border: 0"
-                  />
-                </div>
-                <div class="info-text">
-                  <span class="info-label">Venue:</span>
-                  <span class="info-value"
-                    >Taj Exotica Resort, The Palm, Dubai</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===== LAUNCH SECTION ===== -->
-      <div class="launch-section">
-        <p class="intro">
-          <strong>The Maritime Standard</strong> announces the official launch
-          of
-        </p>
-        <a href="https://tmsaitechconference.com/" class="launch-title"
-          >TMS AITECH 2026</a
-        >
-        <p class="launch-sub">
-          a new platform focused on artificial intelligence, digital
-          transformation, and the future of intelligent shipping.
-        </p>
-      </div>
-
-      <!-- ===== THEME SECTION ===== -->
-      <div class="theme-container">
-        <p class="theme-header">
-          Themed
-          <strong
-            >"Maritime 4.0 and Beyond: Accelerating Intelligence in
-            Motion"</strong
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #0a0a1a;
+      width: 100%;
+      font-family: &quot;Roboto&quot;, Arial, sans-serif;
+    "
+  >
+    <!-- Outer wrapper for centering -->
+    <table
+      width="100%"
+      border="0"
+      cellspacing="0"
+      cellpadding="0"
+      role="presentation"
+      style="background-color: #0a0a1a"
+    >
+      <tr>
+        <td align="center" style="padding: 20px 0">
+          <!-- Email container 650px -->
+          <table
+            width="650"
+            border="0"
+            cellspacing="0"
+            cellpadding="0"
+            role="presentation"
+            style="background-color: #0d0d2b; width: 650px; max-width: 100%"
           >
-          the event comes at a decisive moment as data-driven operations,
-          autonomous systems, predictive analytics, and new IMO digital
-          frameworks begin to redefine how global maritime trade operates.
-        </p>
-        <!-- <p class="theme-desc">
-          the event comes at a decisive moment as data-driven operations,
-          autonomous systems, predictive analytics, and new IMO digital
-          frameworks begin to redefine how global maritime trade operates.
-        </p> -->
-      </div>
-
-      <!-- ===== GRADIENT BAND (FORUM SECTION) ===== -->
-      <div class="forum-section">
-        <p>
-          <strong>TMS AITECH 2026</strong> will serve as a central forum for
-          global leaders, innovators, port authorities, shipowners, technology
-          developers, and regulators to discuss the next phase of maritime
-          digitalization.
-        </p>
-      </div>
-
-      <!-- WHITE SPACER -->
-      <div style="background-color: #ffffff; padding: 20px 0"></div>
-
-      <!-- ===== WHAT AITECH DELIVERS ===== -->
-      <div class="delivers-section">
-        <div class="delivers-inner">
-          <div class="delivers-title-wrap">
-            <div class="delivers-pill">What <span>AITECH</span> Delivers</div>
-          </div>
-          <div class="delivers-grid">
-            <!-- Card 1 -->
-            <a href="https://tmsaitechconference.com/" class="deliver-card">
-              <div class="deliver-card-top">
-                <div class="deliver-check">
-                  <img
-                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
-                    alt="▼"
-                    width="18"
-                    height="18"
-                    style="display: block; width: 45px; height: 35px; border: 0"
-                  />
-                </div>
-                <h4>High-level conference sessions</h4>
-              </div>
-              <div class="deliver-card-body">
-                <p>
-                  led by regional & international AI and maritime decision
-                  makers.
-                </p>
-              </div>
-            </a>
-
-            <!-- Card 2 -->
-            <a href="https://tmsaitechconference.com/" class="deliver-card">
-              <div class="deliver-card-top">
-                <div class="deliver-check">
-                  <img
-                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
-                    alt="▼"
-                    width="18"
-                    height="18"
-                    style="display: block; width: 45px; height: 35px; border: 0"
-                  />
-                </div>
-                <h4>Case Studies</h4>
-              </div>
-              <div class="deliver-card-body">
-                <p>
-                  showcasing supply chain visibility through AI, IoT, and
-                  blockchain-integrated systems
-                </p>
-              </div>
-            </a>
-
-            <!-- Card 3 -->
-            <a href="https://tmsaitechconference.com/" class="deliver-card">
-              <div class="deliver-card-top">
-                <div class="deliver-check">
-                  <img
-                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
-                    alt="▼"
-                    width="18"
-                    height="18"
-                    style="display: block; width: 45px; height: 35px; border: 0"
-                  />
-                </div>
-                <h4>In-depth discussions</h4>
-              </div>
-              <div class="deliver-card-body">
-                <p>
-                  on decision intelligence, AI-enabled cybersecurity, autonomous
-                  vessels, smart ports, digital twins, and IMO-aligned
-                  compliance
-                </p>
-              </div>
-            </a>
-
-            <!-- Card 4 -->
-            <a href="https://tmsaitechconference.com/" class="deliver-card">
-              <div class="deliver-card-top">
-                <div class="deliver-check">
-                  <img
-                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
-                    alt="▼"
-                    width="18"
-                    height="18"
-                    style="display: block; width: 45px; height: 35px; border: 0"
-                  />
-                </div>
-                <h4>Exclusive industry reports & insights</h4>
-              </div>
-              <div class="deliver-card-body">
-                <p>via the AITech Knowledge Hub</p>
-              </div>
-            </a>
-
-            <!-- Card 5 -->
-            <a href="https://tmsaitechconference.com/" class="deliver-card">
-              <div class="deliver-card-top">
-                <div class="deliver-check">
-                  <img
-                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
-                    alt="▼"
-                    width="18"
-                    height="18"
-                    style="display: block; width: 45px; height: 35px; border: 0"
-                  />
-                </div>
-                <h4>Networking opportunities</h4>
-              </div>
-              <div class="deliver-card-body">
-                <p>
-                  connecting investors, innovators, and digital transformation
-                  leaders
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===== LAUNCHING BANNER ===== -->
-      <div class="launching-banner">
-        <p>Launching the <strong>Next Era of Intelligent Shipping</strong></p>
-      </div>
-
-      <!-- ===== WHY NOW ===== -->
-      <div class="why-section">
-        <table
-          width="100%"
-          border="0"
-          cellspacing="0"
-          cellpadding="0"
-          role="presentation"
-        >
-          <tr>
-            <td
-              width="350"
-              valign="top"
-              class="why-img-col"
-              style="padding-right: 35px"
-            >
-              <a
-                href="https://tmsaitechconference.com/"
-                class="why-image-wrapper"
+            <!-- ===== HERO SECTION ===== -->
+            <tr>
+              <td
+                align="center"
+                background="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH-E-image.jpeg"
+                bgcolor="#050510"
                 style="
-                  display: block;
-                  text-decoration: none;
-                  position: relative;
+                  background-image: url(&quot;https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH-E-image.jpeg&quot;);
+                  background-size: cover;
+                  background-position: center center;
+                  background-color: #050510;
+                  padding: 40px 30px 50px;
                 "
               >
-                <div class="why-img-shape">
-                  <img
-                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20E-ships-container.png"
-                    alt="TMS AITECH Conference Shipping"
-                    width="350"
-                    style="
-                      display: block;
-                      width: 100%;
-                      border-radius: 0 40px 0 0;
-                    "
-                  />
-                </div>
-                <div class="why-banner">
-                  <div class="icon-circle">
-                    <img
-                      src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/right-arrow.png"
-                      alt="›"
-                      width="16"
-                      height="16"
-                      style="
-                        display: block;
-                        width: 16px;
-                        height: 16px;
-                        border: 0;
-                      "
-                    />
-                  </div>
-                  <span>Why now?</span>
-                </div>
-                <!-- <div class="why-banner-line"></div> -->
-              </a>
-            </td>
-            <td valign="middle" class="why-text-col">
-              <div class="why-content">
-                <p>
-                  The maritime sector is entering a major transformation era.
-                  With new IMO digital regulations, increasing adoption of smart
-                  systems, & global focus on efficiency & decarbonization, AI is
-                  now becoming essential rather than optional.
-                  <span class="name-highlight">TMS AITECH 2026</span> has been
-                  launched to help the industry navigate this shift with
-                  clarity, strategic direction, and collaboration.
-                </p>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;">
+                <v:fill type="frame" src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH-E-image.jpeg" color="#050510"/>
+                <v:textbox inset="0,0,0,0">
+                <![endif]-->
 
-      <!-- ===== SPONSORS ===== -->
-      <div class="sponsors-section">
-        <div class="sponsors-title">OUR SPONSORS</div>
-
-        <table
-          width="100%"
-          border="0"
-          cellspacing="0"
-          cellpadding="0"
-          role="presentation"
-        >
-          <tr>
-            <!-- Left: Platinum Card -->
-            <td width="35%" valign="top" style="padding-right: 10px">
-              <div class="sponsor-card-platinum">
-                <span
-                  class="sponsor-label"
-                  style="display: block; margin-bottom: 8px"
-                  >Platinum Sponsor</span
+                <!-- Logo -->
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  align="center"
                 >
-                <img
-                  src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/dry%20dockworld-LOGO.png"
-                  alt="Drydocks World"
-                  width="170"
-                  style="
-                    width: 100%;
-                    max-width: 170px;
-                    height: auto;
-                    display: block;
-                  "
-                />
-              </div>
-            </td>
+                  <tr>
+                    <td align="center">
+                      <a href="https://tmsaitechconference.com/">
+                        <img
+                          src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20E-LOGO.png"
+                          alt="TMS AITECH Conference Logo"
+                          width="320"
+                          style="
+                            width: 320px;
+                            max-width: 100%;
+                            height: auto;
+                            display: block;
+                            margin: 0 auto;
+                            border: 0;
+                          "
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
 
-            <!-- Right: Multiple Sponsors Card -->
-            <td width="65%" valign="top" style="padding-left: 10px">
-              <div class="sponsor-card-group">
+                <!-- Subtitle -->
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: &quot;Roboto&quot;, Arial, sans-serif;
+                        font-size: 14px;
+                        font-weight: 700;
+                        color: #ffffff;
+                        letter-spacing: 1px;
+                        padding-top: 14px;
+                      "
+                    >
+                      Maritime 4.0 and Beyond:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: &quot;Roboto&quot;, Arial, sans-serif;
+                        font-size: 13px;
+                        color: #cccccc;
+                        letter-spacing: 1px;
+                        padding-top: 3px;
+                      "
+                    >
+                      Accelerating Intelligence in Motion
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Info Bar -->
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  width="100%"
+                  style="margin-top: 40px"
+                >
+                  <tr>
+                    <td>
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                        bgcolor="#1a1a4a"
+                        style="
+                          background-color: #1a1a4a;
+                          border: 2px solid #5da0f9;
+                          border-radius: 50px;
+                        "
+                      >
+                        <tr>
+                          <!-- Date -->
+                          <td
+                            width="33%"
+                            align="center"
+                            valign="middle"
+                            style="padding: 12px 10px"
+                          >
+                            <table
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              role="presentation"
+                            >
+                              <tr>
+                                <td valign="middle" style="padding-right: 8px">
+                                  <img
+                                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/calander-icon.png"
+                                    alt="Calendar"
+                                    width="22"
+                                    height="22"
+                                    style="
+                                      display: block;
+                                      width: 22px;
+                                      height: 22px;
+                                      border: 0;
+                                    "
+                                  />
+                                </td>
+                                <td valign="middle">
+                                  <span
+                                    style="
+                                      font-family:
+                                        &quot;Montserrat&quot;, Arial,
+                                        sans-serif;
+                                      font-size: 12px;
+                                      font-weight: 700;
+                                      color: #76adf5;
+                                      display: block;
+                                      line-height: 1.1;
+                                    "
+                                    >Date:</span
+                                  >
+                                  <span
+                                    style="
+                                      font-family:
+                                        &quot;Montserrat&quot;, Arial,
+                                        sans-serif;
+                                      font-size: 11px;
+                                      color: #cccccc;
+                                      display: block;
+                                      margin-top: 2px;
+                                      line-height: 1.1;
+                                    "
+                                    >April 14, 2026</span
+                                  >
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <!-- Time -->
+                          <td
+                            width="33%"
+                            align="center"
+                            valign="middle"
+                            style="
+                              padding: 12px 10px;
+                              border-left: 1px solid #333366;
+                              border-right: 1px solid #333366;
+                            "
+                          >
+                            <table
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              role="presentation"
+                            >
+                              <tr>
+                                <td valign="middle" style="padding-right: 8px">
+                                  <img
+                                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/clock-icon.png"
+                                    alt="Clock"
+                                    width="22"
+                                    height="22"
+                                    style="
+                                      display: block;
+                                      width: 22px;
+                                      height: 22px;
+                                      border: 0;
+                                    "
+                                  />
+                                </td>
+                                <td valign="middle">
+                                  <span
+                                    style="
+                                      font-family:
+                                        &quot;Montserrat&quot;, Arial,
+                                        sans-serif;
+                                      font-size: 12px;
+                                      font-weight: 700;
+                                      color: #76adf5;
+                                      display: block;
+                                      line-height: 1.1;
+                                    "
+                                    >Time:</span
+                                  >
+                                  <span
+                                    style="
+                                      font-family:
+                                        &quot;Montserrat&quot;, Arial,
+                                        sans-serif;
+                                      font-size: 11px;
+                                      color: #cccccc;
+                                      display: block;
+                                      margin-top: 2px;
+                                      line-height: 1.1;
+                                    "
+                                    >14:30 &#8211; 18:00</span
+                                  >
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <!-- Venue -->
+                          <td
+                            width="34%"
+                            align="center"
+                            valign="middle"
+                            style="padding: 12px 10px"
+                          >
+                            <table
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              role="presentation"
+                            >
+                              <tr>
+                                <td valign="middle" style="padding-right: 8px">
+                                  <img
+                                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/location-icon.png"
+                                    alt="Location"
+                                    width="22"
+                                    height="22"
+                                    style="
+                                      display: block;
+                                      width: 22px;
+                                      height: 22px;
+                                      border: 0;
+                                    "
+                                  />
+                                </td>
+                                <td valign="middle">
+                                  <span
+                                    style="
+                                      font-family:
+                                        &quot;Montserrat&quot;, Arial,
+                                        sans-serif;
+                                      font-size: 12px;
+                                      font-weight: 700;
+                                      color: #76adf5;
+                                      display: block;
+                                      line-height: 1.1;
+                                    "
+                                    >Venue:</span
+                                  >
+                                  <span
+                                    style="
+                                      font-family:
+                                        &quot;Montserrat&quot;, Arial,
+                                        sans-serif;
+                                      font-size: 11px;
+                                      color: #cccccc;
+                                      display: block;
+                                      margin-top: 2px;
+                                      line-height: 1.1;
+                                    "
+                                    >Taj Exotica Resort, The Palm, Dubai</span
+                                  >
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!--[if gte mso 9]>
+                </v:textbox>
+                </v:rect>
+                <![endif]-->
+              </td>
+            </tr>
+
+            <!-- ===== LAUNCH SECTION ===== -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                style="
+                  background-color: #ffffff;
+                  padding: 50px 50px 10px;
+                  text-align: center;
+                "
+              >
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: &quot;Roboto&quot;, Arial, sans-serif;
+                        font-size: 16px;
+                        color: #777777;
+                        line-height: 1.4;
+                        padding-bottom: 5px;
+                      "
+                    >
+                      <strong style="color: #000000; font-weight: 700"
+                        >The Maritime Standard</strong
+                      >
+                      announces the official launch of
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding: 5px 0">
+                      <a
+                        href="https://tmsaitechconference.com/"
+                        style="
+                          font-family: &quot;Roboto&quot;, Arial, sans-serif;
+                          font-size: 34px;
+                          font-weight: 700;
+                          letter-spacing: 1.5px;
+                          color: #76399b;
+                          text-decoration: none;
+                          display: inline-block;
+                        "
+                        >TMS AITECH 2026</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: &quot;Roboto&quot;, Arial, sans-serif;
+                        font-size: 15px;
+                        color: #666666;
+                        line-height: 1.6;
+                        padding: 10px 40px 0;
+                      "
+                    >
+                      a new platform focused on artificial intelligence, digital
+                      transformation, and the future of intelligent shipping.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ===== THEME SECTION ===== -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                style="
+                  background-color: #ffffff;
+                  padding: 7px 50px 4px;
+                  text-align: center;
+                "
+              >
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: &quot;Roboto&quot;, Arial, sans-serif;
+                        font-size: 16px;
+                        color: #777777;
+                        line-height: 1.4;
+                      "
+                    >
+                      Themed
+                      <strong style="color: #000000"
+                        >&quot;Maritime 4.0 and Beyond: Accelerating
+                        Intelligence in Motion&quot;</strong
+                      >
+                      the event comes at a decisive moment as data-driven
+                      operations, autonomous systems, predictive analytics, and
+                      new IMO digital frameworks begin to redefine how global
+                      maritime trade operates.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ===== GRADIENT BAND (FORUM SECTION) ===== -->
+            <tr>
+              <td
+                background="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20bg-gradient.png"
+                bgcolor="#4b0b73"
+                style="
+                  background-image: url(&quot;https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20bg-gradient.png&quot;);
+                  background-size: cover;
+                  background-position: center;
+                  background-color: white;
+                  padding: 45px 50px;
+                  text-align: center;
+                "
+              >
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;">
+                <v:fill type="frame" src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20bg-gradient.png" color="#4b0b73"/>
+                <v:textbox inset="0,0,0,0">
+                <![endif]-->
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: &quot;Roboto&quot;, Arial, sans-serif;
+                        font-size: 16px;
+                        color: #ffffff;
+                        line-height: 1.6;
+                        font-weight: 600;
+                      "
+                    >
+                      <strong style="font-weight: 800">TMS AITECH 2026</strong>
+                      will serve as a central forum for global leaders,
+                      innovators, port authorities, shipowners, technology
+                      developers, and regulators to discuss the next phase of
+                      maritime digitalization.
+                    </td>
+                  </tr>
+                </table>
+                <!--[if gte mso 9]>
+                </v:textbox>
+                </v:rect>
+                <![endif]-->
+              </td>
+            </tr>
+
+            <!-- WHITE SPACER -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                style="
+                  background-color: #ffffff;
+                  padding: 20px 0;
+                  font-size: 0;
+                  line-height: 0;
+                "
+              >
+                &nbsp;
+              </td>
+            </tr>
+
+            <!-- ===== WHAT AITECH DELIVERS ===== -->
+            <tr>
+              <td
+                background="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20delivers-bg.png"
+                bgcolor="#050b1f"
+                style="
+                  background-image: url(&quot;https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20delivers-bg.png&quot;);
+                  background-size: cover;
+                  background-position: center;
+                  background-color: #050b1f;
+                  padding: 50px 20px;
+                "
+              >
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;">
+                <v:fill type="frame" src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20delivers-bg.png" color="#050b1f"/>
+                <v:textbox inset="0,0,0,0">
+                <![endif]-->
+
+                <!-- Title Pill -->
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  align="center"
+                  style="margin: 0 auto"
+                >
+                  <tr>
+                    <td
+                      bgcolor="#0d0d2b"
+                      style="
+                        background-color: #0d0d2b;
+                        border: 3px solid #73a9f0;
+                        border-radius: 50px;
+                        padding: 15px 45px;
+                        font-family: &quot;Roboto&quot;, Arial, sans-serif;
+                        font-size: 24px;
+                        font-weight: 700;
+                        color: #ffffff;
+                        letter-spacing: 1px;
+                        text-align: center;
+                      "
+                    >
+                      What AITECH Delivers
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Spacer -->
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td style="height: 40px; font-size: 0; line-height: 0">
+                      &nbsp;
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Cards Row -->
                 <table
                   width="100%"
                   border="0"
@@ -1332,129 +635,1277 @@
                   role="presentation"
                 >
                   <tr>
-                    <td align="center" valign="middle" width="33%">
-                      <div class="sponsor-item">
-                        <span class="sponsor-label" style="display: block"
-                          >Notepads &amp; Pens</span
-                        >
-                        <img
-                          src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/aiss-LOGO.png"
-                          alt="AISS"
-                          width="120"
-                          style="
-                            width: 100%;
-                            max-width: 120px;
-                            height: auto;
-                            display: block;
-                          "
-                        />
-                      </div>
+                    <!-- Card 1 -->
+                    <td width="20%" valign="top" style="padding: 0 3px">
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                      >
+                        <tr>
+                          <td
+                            background="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/al-gradient-card.png"
+                            height="120"
+                            style="
+                              background-image: url(&quot;https://befirst-productions.github.io/ai-tech-email-temp/assets/images/al-gradient-card.png&quot;);
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              background-position: center;
+                              border-radius: 20px;
+                              padding: 10px 10px;
+                              text-align: center;
+                              box-shadow: 0 4px 15px #00000050;
+                              height: 120px;
+                              vertical-align: middle;
+                            "
+                          >
+                            <a
+                              href="https://tmsaitechconference.com/"
+                              style="text-decoration: none; color: #ffffff"
+                            >
+                              <table
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                role="presentation"
+                                align="center"
+                                style="margin: 0 auto 8px auto"
+                              >
+                                <tr>
+                                  <!-- <td align="center">
+                                    <img
+                                      src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
+                                      alt="▼"
+                                      width="28"
+                                      height="28"
+                                      style="
+                                        display: block;
+                                        width: 28px;
+                                        height: 28px;
+                                        border: 0;
+                                      "
+                                    />
+                                  </td> -->
+                                </tr>
+                              </table>
+                              <table
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                role="presentation"
+                                width="100%"
+                              >
+                                <tr>
+                                  <td
+                                    align="center"
+                                    style="
+                                      font-family:
+                                        &quot;Open Sans&quot;, Arial, sans-serif;
+                                      font-size: 13px;
+                                      font-weight: 800;
+                                      color: #ffffff;
+                                      line-height: 1.3;
+                                      padding: 0 2px;
+                                    "
+                                  >
+                                    High-level conference sessions
+                                  </td>
+                                </tr>
+                              </table>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            bgcolor="#0e0e32"
+                            height="160"
+                            style="
+                              background-color: #0e0e32;
+                            border-left: 2px solid #555577;
+                              border-top: 2px solid #555577;
+                              border-right: 2px solid #555577;
+                              border-bottom: 2px solid #555577;
+                              border-radius: 25px;
+                              padding: 6px 15px 78px;
+                              text-align: center;
+                              height: 160px;
+                              vertical-align: middle;
+                            "
+                          >
+                            <a
+                              href="https://tmsaitechconference.com/"
+                              style="
+                                text-decoration: none;
+                                color: #ffffff;
+                                font-family:
+                                  &quot;Roboto&quot;, Arial, sans-serif;
+                                font-size: 13px;
+                                line-height: 1.6;
+                                font-weight: 500;
+                              "
+                              >led by regional &amp; international AI and
+                              maritime decision makers.</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
                     </td>
-                    <td align="center" valign="middle" width="33%">
-                      <div class="sponsor-item">
-                        <span class="sponsor-label" style="display: block"
-                          >Multimedia</span
-                        >
-                        <img
-                          src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/shipping-LOGO.png"
-                          alt="TCM Shipping"
-                          width="55"
-                          style="
-                            width: 100%;
-                            max-width: 55px;
-                            height: auto;
-                            display: block;
-                          "
-                        />
-                      </div>
+
+                    <!-- Card 2 -->
+                    <td width="20%" valign="top" style="padding: 0 3px">
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                      >
+                        <tr>
+                          <td
+                            background="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/al-gradient-card.png"
+                            height="120"
+                            style="
+                              background-image: url(&quot;https://befirst-productions.github.io/ai-tech-email-temp/assets/images/al-gradient-card.png&quot;);
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              background-position: center;
+                              border-radius: 20px;
+                              padding: 10px 10px;
+                              text-align: center;
+                              box-shadow: 0 4px 15px #00000050;
+                              height: 120px;
+                              vertical-align: middle;
+                            "
+                          >
+                            <a
+                              href="https://tmsaitechconference.com/"
+                              style="text-decoration: none; color: #ffffff"
+                            >
+                              <table
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                role="presentation"
+                                align="center"
+                                style="margin: 0 auto 8px auto"
+                              >
+                                <tr>
+                                  <!-- <td align="center">
+                                    <img
+                                      src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
+                                      alt="▼"
+                                      width="28"
+                                      height="28"
+                                      style="
+                                        display: block;
+                                        width: 28px;
+                                        height: 28px;
+                                        border: 0;
+                                      "
+                                    />
+                                  </td> -->
+                                </tr>
+                              </table>
+                              <table
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                role="presentation"
+                                width="100%"
+                              >
+                                <tr>
+                                  <td
+                                    align="center"
+                                    style="
+                                      font-family:
+                                        &quot;Open Sans&quot;, Arial, sans-serif;
+                                      font-size: 13px;
+                                      font-weight: 800;
+                                      color: #ffffff;
+                                      line-height: 1.3;
+                                      padding: 0 2px;
+                                    "
+                                  >
+                                    Case Studies
+                                  </td>
+                                </tr>
+                              </table>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            bgcolor="#0e0e32"
+                            height="160"
+                            style="
+                              background-color: #0e0e32;
+                           border-left: 2px solid #555577;
+                              border-top: 2px solid #555577;
+                              border-right: 2px solid #555577;
+                              border-bottom: 2px solid #555577;
+                              border-radius: 25px;
+                              padding: 15px 10px 57px;
+                              text-align: center;
+                              height: 160px;
+                              vertical-align: middle;
+                            "
+                          >
+                            <a
+                              href="https://tmsaitechconference.com/"
+                              style="
+                                text-decoration: none;
+                                color: #ffffff;
+                                font-family:
+                                  &quot;Roboto&quot;, Arial, sans-serif;
+                                font-size: 13px;
+                                line-height: 1.6;
+                                font-weight: 500;
+                              "
+                              >showcasing supply chain visibility through AI,
+                              IoT, and blockchain-integrated systems</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
                     </td>
-                    <td align="center" valign="middle" width="33%">
-                      <div class="sponsor-item">
-                        <span class="sponsor-label" style="display: block"
-                          >Drink Reception</span
-                        >
-                        <img
-                          src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/saifee-LOGO.png"
-                          alt="SAIFEE"
-                          width="50"
-                          style="
-                            width: 100%;
-                            max-width: 50px;
-                            height: auto;
-                            display: block;
-                          "
-                        />
-                      </div>
+
+                    <!-- Card 3 -->
+                    <td width="20%" valign="top" style="padding: 0 3px">
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                      >
+                        <tr>
+                          <td
+                            background="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/al-gradient-card.png"
+                            height="120"
+                            style="
+                              background-image: url(&quot;https://befirst-productions.github.io/ai-tech-email-temp/assets/images/al-gradient-card.png&quot;);
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              background-position: center;
+                              border-radius: 20px;
+                              padding: 10px 10px;
+                              text-align: center;
+                              box-shadow: 0 4px 15px #00000050;
+                              height: 120px;
+                              vertical-align: middle;
+                            "
+                          >
+                            <a
+                              href="https://tmsaitechconference.com/"
+                              style="text-decoration: none; color: #ffffff"
+                            >
+                              <table
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                role="presentation"
+                                align="center"
+                                style="margin: 0 auto 8px auto"
+                              >
+                                <!-- <tr>
+                                  <td align="center">
+                                    <img
+                                      src="/assets/images/bottom%20arrow.png"
+                                      alt="▼"
+                                      width="28"
+                                      height="28"
+                                      style="
+                                        display: block;
+                                        width: 28px;
+                                        height: 28px;
+                                        border: 0;
+                                      "
+                                    />
+                                  </td>
+                                </tr> -->
+                              </table>
+                              <table
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                role="presentation"
+                                width="100%"
+                              >
+                                <tr>
+                                  <td
+                                    align="center"
+                                    style="
+                                      font-family:
+                                        &quot;Open Sans&quot;, Arial, sans-serif;
+                                      font-size: 13px;
+                                      font-weight: 800;
+                                      color: #ffffff;
+                                      line-height: 1.3;
+                                      padding: 0 2px;
+                                    "
+                                  >
+                                    In-depth discussions
+                                  </td>
+                                </tr>
+                              </table>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            bgcolor="#0e0e32"
+                            height="160"
+                            style="
+                              background-color: #0e0e32;
+                              border-left: 2px solid #555577;
+                              border-top: 2px solid #555577;
+                              border-right: 2px solid #555577;
+                              border-bottom: 2px solid #555577;
+                              border-radius: 25px;
+                              padding: 15px 10px 15px;
+                              text-align: center;
+                              height: 160px;
+                              vertical-align: middle;
+                            "
+                          >
+                            <a
+                              href="https://tmsaitechconference.com/"
+                              style="
+                                text-decoration: none;
+                                color: #ffffff;
+                                font-family:
+                                  &quot;Roboto&quot;, Arial, sans-serif;
+                                font-size: 13px;
+                                line-height: 1.6;
+                                font-weight: 500;
+                              "
+                              >on decision intelligence, AI-enabled
+                              cybersecurity, autonomous vessels, smart ports,
+                              digital twins, and IMO-aligned compliance</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <!-- Card 4 -->
+                    <td width="20%" valign="top" style="padding: 0 3px">
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                      >
+                        <tr>
+                          <td
+                            background="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/al-gradient-card.png"
+                            height="120"
+                            style="
+                              background-image: url(&quot;https://befirst-productions.github.io/ai-tech-email-temp/assets/images/al-gradient-card.png&quot;);
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              background-position: center;
+                              border-radius: 20px;
+                              padding: 10px 10px;
+                              text-align: center;
+                              box-shadow: 0 4px 15px #00000050;
+                              height: 120px;
+                              vertical-align: middle;
+                            "
+                          >
+                            <a
+                              href="https://tmsaitechconference.com/"
+                              style="text-decoration: none; color: #ffffff"
+                            >
+                              <table
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                role="presentation"
+                                align="center"
+                                style="margin: 0 auto 8px auto"
+                              >
+                                <tr>
+                                  <!-- <td align="center">
+                                    <img
+                                      src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
+                                      alt="▼"
+                                      width="28"
+                                      height="28"
+                                      style="
+                                        display: block;
+                                        width: 28px;
+                                        height: 28px;
+                                        border: 0;
+                                      "
+                                    />
+                                  </td> -->
+                                </tr>
+                              </table>
+                              <table
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                role="presentation"
+                                width="100%"
+                              >
+                                <tr>
+                                  <td
+                                    align="center"
+                                    style="
+                                      font-family:
+                                        &quot;Open Sans&quot;, Arial, sans-serif;
+                                      font-size: 13px;
+                                      font-weight: 800;
+                                      color: #ffffff;
+                                      line-height: 1.3;
+                                      padding: 0 2px;
+                                    "
+                                  >
+                                    Exclusive industry reports &amp; insights
+                                  </td>
+                                </tr>
+                              </table>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            bgcolor="#0e0e32"
+                            height="160"
+                            style="
+                              background-color: #0e0e32;
+                            border-left: 2px solid #555577;
+                              border-top: 2px solid #555577;
+                              border-right: 2px solid #555577;
+                              border-bottom: 2px solid #555577;
+                              border-radius: 25px;
+                              padding: 1px 16px 85px;
+                              text-align: center;
+                              height: 160px;
+                              vertical-align: middle;
+                            "
+                          >
+                            <a
+                              href="https://tmsaitechconference.com/"
+                              style="
+                                text-decoration: none;
+                                color: #ffffff;
+                                font-family:
+                                  &quot;Roboto&quot;, Arial, sans-serif;
+                                font-size: 13px;
+                                line-height: 1.6;
+                                font-weight: 500;
+                              "
+                              >via the AITech Knowledge Hub</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <!-- Card 5 -->
+                    <td width="20%" valign="top" style="padding: 0 3px">
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                      >
+                        <tr>
+                          <td
+                            background="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/al-gradient-card.png"
+                            height="120"
+                            style="
+                              background-image: url(&quot;https://befirst-productions.github.io/ai-tech-email-temp/assets/images/al-gradient-card.png&quot;);
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              background-position: center;
+                              border-radius: 20px;
+                              padding: 10px 10px;
+                              text-align: center;
+                              box-shadow: 0 4px 15px #00000050;
+                              height: 120px;
+                              vertical-align: middle;
+                            "
+                          >
+                            <a
+                              href="https://tmsaitechconference.com/"
+                              style="text-decoration: none; color: #ffffff"
+                            >
+                              <table
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                role="presentation"
+                                align="center"
+                                style="margin: 0 auto 8px auto"
+                              >
+                                <tr>
+                                  <!-- <td align="center">
+                                    <img
+                                      src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/bottom%20arrow.png"
+                                      alt="▼"
+                                      width="28"
+                                      height="28"
+                                      style="
+                                        display: block;
+                                        width: 28px;
+                                        height: 28px;
+                                        border: 0;
+                                      "
+                                    />
+                                  </td> -->
+                                </tr>
+                              </table>
+                              <table
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                role="presentation"
+                                width="100%"
+                              >
+                                <tr>
+                                  <td
+                                    align="center"
+                                    style="
+                                      font-family:
+                                        &quot;Open Sans&quot;, Arial, sans-serif;
+                                      font-size: 13px;
+                                      font-weight: 800;
+                                      color: #ffffff;
+                                      line-height: 1.3;
+                                      padding: 0 2px;
+                                    "
+                                  >
+                                    Networking opportunities
+                                  </td>
+                                </tr>
+                              </table>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            bgcolor="#0e0e32"
+                            height="160"
+                            style="
+                              background-color: #0e0e32;
+                             border-left: 2px solid #555577;
+                              border-top: 2px solid #555577;
+                              border-right: 2px solid #555577;
+                              border-bottom: 2px solid #555577;
+                              border-radius: 25px;
+                              padding: 8px 13px 77px;
+                              text-align: center;
+                              height: 160px;
+                              vertical-align: middle;
+                            "
+                          >
+                            <a
+                              href="https://tmsaitechconference.com/"
+                              style="
+                                text-decoration: none;
+                                color: #ffffff;
+                                font-family:
+                                  &quot;Roboto&quot;, Arial, sans-serif;
+                                font-size: 13px;
+                                line-height: 1.6;
+                                font-weight: 500;
+                              "
+                              >connecting investors, innovators, and digital
+                              transformation leaders</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
                     </td>
                   </tr>
                 </table>
-              </div>
-            </td>
-          </tr>
-        </table>
 
-        <div class="sponsors-bottom-line"></div>
-      </div>
-
-      <!-- ===== CTA TEXT ===== -->
-      <div class="cta-section">
-        <p>
-          Be part of the
-          <span class="highlight">next era of maritime innovation</span>.<br />
-          Updates on speakers, agenda, sponsorship opportunities, and<br />exclusive
-          insights will be shared soon.
-        </p>
-      </div>
-
-      <!-- ===== FOOTER BOOK NOW ===== -->
-      <div style="background-color: #ffffff; padding: 40px 40px 0 40px">
-        <div class="footer-cta">
-          <table
-            width="100%"
-            border="0"
-            cellspacing="0"
-            cellpadding="0"
-            role="presentation"
-          >
-            <tr>
-              <td valign="middle" class="footer-cta-text">
-                Let's advance towards a<br />
-                more intelligent and<br />
-                connected<span> maritime future.</span>
+                <!--[if gte mso 9]>
+                </v:textbox>
+                </v:rect>
+                <![endif]-->
               </td>
-              <td valign="middle" align="right" class="footer-right-col">
-                <div class="footer-right">
-                  <span class="book-label" style="display: block"
-                    >BOOK NOW</span
-                  >
-                  <a
-                    href="https://tmsaitechconference.com"
-                    class="book-btn-new"
-                  >
-                    <div class="book-arrow-circle">
-                      <img
-                        src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/right-arrow.png"
-                        alt="›"
-                        width="14"
-                        height="14"
-                        style="
-                          display: block;
-                          width: 14px;
-                          height: 14px;
-                          border: 0;
-                        "
-                      />
-                    </div>
-                    <span class="book-btn-url"
-                      >www.tmsaitechconference.com</span
+            </tr>
+
+            <!-- ===== LAUNCHING BANNER ===== -->
+            <tr>
+              <td
+                background="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20launch-bg.png"
+                bgcolor="#2a1050"
+                style="
+                  background-image: url(&quot;https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20launch-bg.png&quot;);
+                  background-size: cover;
+                  background-position: center;
+                  background-color: #2a1050;
+                  padding: 22px 30px;
+                  text-align: center;
+                "
+              >
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;">
+                <v:fill type="frame" src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH%20launch-bg.png" color="#2a1050"/>
+                <v:textbox inset="0,0,0,0">
+                <![endif]-->
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: &quot;Roboto&quot;, Arial, sans-serif;
+                        font-size: 16px;
+                        color: #eeeeee;
+                        font-weight: 400;
+                      "
                     >
-                  </a>
-                </div>
+                      Launching the
+                      <strong
+                        style="
+                          font-style: italic;
+                          color: #ffffff;
+                          font-weight: 700;
+                        "
+                        >Next Era of Intelligent Shipping</strong
+                      >
+                    </td>
+                  </tr>
+                </table>
+                <!--[if gte mso 9]>
+                </v:textbox>
+                </v:rect>
+                <![endif]-->
+              </td>
+            </tr>
+
+            <!-- ===== WHY NOW SECTION ===== -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                style="background-color: #ffffff; padding: 50px 45px 10px"
+              >
+                <table
+                  width="100%"
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                >
+                  <tr>
+                    <!-- Left: Image -->
+                    <td width="320" valign="top" style="padding-right: 35px">
+                      <a
+                        href="https://tmsaitechconference.com/"
+                        style="text-decoration: none; display: block"
+                      >
+                        <img
+                          src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/AITECH E-shippings.png"
+                          alt="TMS AITECH Conference Shipping"
+                          width="320"
+                          style="
+                            display: block;
+                            width: 320px;
+                            max-width: 100%;
+                            height: auto;
+                            border: 0;
+                          "
+                        />
+                      </a>
+                      <!-- Why Now banner below image -->
+                      <!-- <table
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                        style="margin-top: -5px"
+                      >
+                        <tr>
+                          <td
+                            bgcolor="#5d1a8a"
+                            style="
+                              background-color: #5d1a8a;
+                              padding: 6px 40px 6px 6px;
+                            "
+                          >
+                            <table
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              role="presentation"
+                            >
+                              <tr>
+                                <td
+                                  width="25"
+                                  height="25"
+                                  bgcolor="#ffffff"
+                                  style="
+                                    width: 25px;
+                                    height: 25px;
+                                    background-color: #ffffff;
+                                    border-radius: 50%;
+                                    text-align: center;
+                                    vertical-align: middle;
+                                  "
+                                >
+                                  <img
+                                    src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/right-arrow.png"
+                                    alt=">"
+                                    width="14"
+                                    height="14"
+                                    style="
+                                      display: inline-block;
+                                      width: 14px;
+                                      height: 14px;
+                                      border: 0;
+                                    "
+                                  />
+                                </td>
+                                <td
+                                  style="
+                                    padding-left: 8px;
+                                    font-family:
+                                      &quot;Roboto&quot;, Arial, sans-serif;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    color: #f674c6;
+                                  "
+                                >
+                                  Why now?
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table> -->
+                    </td>
+                    <!-- Right: Text Content -->
+                    <td
+                      valign="middle"
+                      style="
+                        font-family: &quot;Roboto&quot;, Arial, sans-serif;
+                        font-size: 12px;
+                        color: #545454;
+                        line-height: 1.7;
+                      "
+                    >
+                      The maritime sector is entering a major transformation
+                      era. With new IMO digital regulations, increasing adoption
+                      of smart systems, &amp; global focus on efficiency &amp;
+                      decarbonization, AI is now becoming essential rather than
+                      optional.
+                      <span style="color: #5058ef; font-weight: 700"
+                        >TMS AITECH 2026</span
+                      >
+                      has been launched to help the industry navigate this shift
+                      with clarity, strategic direction, and collaboration.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ===== SPONSORS SECTION ===== -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                style="background-color: #ffffff; padding: 40px 45px"
+              >
+                <!-- Sponsors Title -->
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  width="100%"
+                  style="margin-bottom: 30px"
+                >
+                  <tr>
+                    <td width="30%" valign="middle" style="padding: 0">
+                      <table
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                        width="100%"
+                      >
+                        <tr>
+                          <td
+                            height="2"
+                            style="
+                              height: 2px;
+                              max-height: 2px;
+                              background-color: #7a5ac7;
+                              font-size: 0;
+                              line-height: 0;
+                              mso-line-height-rule: exactly;
+                              overflow: hidden;
+                              padding: 0;
+                            "
+                          ></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td
+                      align="center"
+                      style="
+                        font-family: &quot;Roboto&quot;, Arial, sans-serif;
+                        font-size: 14px;
+                        font-weight: 500;
+                        letter-spacing: 4px;
+                        color: #f674c6;
+                        text-transform: uppercase;
+                        padding: 0 15px;
+                        white-space: nowrap;
+                      "
+                    >
+                      OUR SPONSORS
+                    </td>
+                    <td width="30%" valign="middle" style="padding: 0">
+                      <table
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                        width="100%"
+                      >
+                        <tr>
+                          <td
+                            height="2"
+                            style="
+                              height: 2px;
+                              max-height: 2px;
+                              background-color: #7a5ac7;
+                              font-size: 0;
+                              line-height: 0;
+                              mso-line-height-rule: exactly;
+                              overflow: hidden;
+                              padding: 0;
+                            "
+                          ></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Sponsors Cards -->
+                <table
+                  width="100%"
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                >
+                  <tr>
+                    <!-- Platinum Sponsor -->
+                    <td width="35%" valign="middle" style="padding-right: 10px">
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                        bgcolor="#e8d8f5"
+                        style="
+                          background-color: #e8d8f5;
+                          border-radius: 20px;
+                          text-align: center;
+                          padding: 15px;
+                        "
+                      >
+                        <tr>
+                          <td align="center" style="padding: 10px">
+                            <span
+                              style="
+                                font-family:
+                                  &quot;Roboto&quot;, Arial, sans-serif;
+                                font-size: 11px;
+                                color: #666666;
+                                font-weight: 600;
+                                display: block;
+                                margin-bottom: 10px;
+                              "
+                              >Platinum Sponsor</span
+                            >
+                            <img
+                              src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/dry%20dockworld-LOGO.png"
+                              alt="Drydocks World"
+                              width="170"
+                              style="
+                                width: 170px;
+                                max-width: 100%;
+                                height: auto;
+                                display: block;
+                                margin: 0 auto;
+                                border: 0;
+                              "
+                            />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <!-- Other Sponsors -->
+                    <td width="65%" valign="middle" style="padding-left: 10px">
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                        bgcolor="#efefef"
+                        style="
+                          background-color: #efefef;
+                          border-radius: 20px;
+                          padding: 15px;
+                        "
+                      >
+                        <tr>
+                          <td
+                            width="33%"
+                            align="center"
+                            valign="middle"
+                            style="padding: 10px"
+                          >
+                            <span
+                              style="
+                                font-family:
+                                  &quot;Roboto&quot;, Arial, sans-serif;
+                                font-size: 11px;
+                                color: #666666;
+                                font-weight: 600;
+                                display: block;
+                                margin-bottom: 17px;
+                              "
+                              >Notepads &amp; Pens</span
+                            >
+                            <img
+                              src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/aiss-LOGO.png"
+                              alt="AISS"
+                              width="100"
+                              style="
+                                width: 100px;
+                                max-width: 100%;
+                                height: auto;
+                                display: block;
+                                margin: 0 auto;
+                                border: 0;
+                              "
+                            />
+                          </td>
+                          <td
+                            width="33%"
+                            align="center"
+                            valign="middle"
+                            style="padding: 10px"
+                          >
+                            <span
+                              style="
+                                font-family:
+                                  &quot;Roboto&quot;, Arial, sans-serif;
+                                font-size: 11px;
+                                color: #666666;
+                                font-weight: 600;
+                                display: block;
+                                margin-bottom: 8px;
+                              "
+                              >Multimedia</span
+                            >
+                            <img
+                              src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/shipping-LOGO.png"
+                              alt="TCM Shipping"
+                              width="55"
+                              style="
+                                width: 55px;
+                                max-width: 100%;
+                                height: auto;
+                                display: block;
+                                margin: 0 auto;
+                                border: 0;
+                              "
+                            />
+                          </td>
+                          <td
+                            width="33%"
+                            align="center"
+                            valign="middle"
+                            style="padding: 10px"
+                          >
+                            <span
+                              style="
+                                font-family:
+                                  &quot;Roboto&quot;, Arial, sans-serif;
+                                font-size: 11px;
+                                color: #666666;
+                                font-weight: 600;
+                                display: block;
+                                margin-bottom: 8px;
+                              "
+                              >Drink Reception</span
+                            >
+                            <img
+                              src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/saifee-LOGO.png"
+                              alt="SAIFEE"
+                              width="50"
+                              style="
+                                width: 50px;
+                                max-width: 100%;
+                                height: auto;
+                                display: block;
+                                margin: 0 auto;
+                                border: 0;
+                              "
+                            />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Bottom Line -->
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  width="100%"
+                  style="margin-top: 40px"
+                >
+                  <tr>
+                    <td
+                      height="2"
+                      style="
+                        height: 2px;
+                        max-height: 2px;
+                        background-color: #9a5ac7;
+                        font-size: 0;
+                        line-height: 0;
+                        mso-line-height-rule: exactly;
+                        overflow: hidden;
+                        padding: 0;
+                      "
+                    ></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ===== CTA TEXT ===== -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                style="
+                  background-color: #ffffff;
+                  padding: 24px 40px 0;
+                  text-align: center;
+                "
+              >
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: Arial, sans-serif;
+                        font-size: 16px;
+                        color: #333333;
+                        line-height: 1.4;
+                      "
+                    >
+                      Be part of the
+                      <span
+                        style="
+                          color: #434beb;
+                          font-style: italic;
+                          font-weight: 700;
+                        "
+                        >next era of maritime innovation</span
+                      >.<br />
+                      Updates on speakers, agenda, sponsorship opportunities,
+                      and<br />exclusive insights will be shared soon.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ===== FOOTER BOOK NOW ===== -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                style="background-color: #ffffff; padding: 40px 40px 0"
+              >
+                <table
+                  width="100%"
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  role="presentation"
+                  bgcolor="#1a0e4a"
+                  style="
+                    background-color: #1a0e4a;
+                    border-radius: 50px 50px 0 0;
+                    padding: 40px 30px;
+                  "
+                >
+                  <tr>
+                    <td style="padding: 40px 30px">
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                      >
+                        <tr>
+                          <td
+                            valign="middle"
+                            style="
+                              font-family:
+                                &quot;Roboto&quot;, Arial, sans-serif;
+                              font-size: 18px;
+                              color: #ffffff;
+                              font-weight: 700;
+                              line-height: 1.3;
+                            "
+                          >
+                            Let&#8217;s advance towards a<br />
+                            more intelligent and<br />
+                            connected
+                            <span style="color: #f674c6; font-weight: 700"
+                              >maritime future.</span
+                            >
+                          </td>
+                          <td valign="middle" align="right" width="280">
+                            <table
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              role="presentation"
+                              align="right"
+                            >
+                              <tr>
+                                <td
+                                  align="center"
+                                  style="
+                                    font-family:
+                                      &quot;Roboto&quot;, Arial, sans-serif;
+                                    font-size: 10px;
+                                    color: #aaaaaa;
+                                    text-transform: uppercase;
+                                    letter-spacing: 2px;
+                                    padding-bottom: 10px;
+                                  "
+                                >
+                                  BOOK NOW
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <table
+                                    border="0"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                    role="presentation"
+                                    style="
+                                      border: 2px solid #7a5ac7;
+                                      border-radius: 30px;
+                                    "
+                                  >
+                                    <tr>
+                                      <td>
+                                        <a
+                                          href="https://tmsaitechconference.com"
+                                          style="
+                                            text-decoration: none;
+                                            display: block;
+                                          "
+                                        >
+                                          <table
+                                            border="0"
+                                            cellspacing="0"
+                                            cellpadding="0"
+                                            role="presentation"
+                                          >
+                                            <tr>
+                                              <td
+                                                width="35"
+                                                height="35"
+                                                bgcolor="#ffffff"
+                                                style="
+                                                  width: 35px;
+                                                  height: 35px;
+                                                  background-color: #ffffff;
+                                                  border-radius: 50%;
+                                                  text-align: center;
+                                                  vertical-align: middle;
+                                                "
+                                              >
+                                                <img
+                                                  src="https://befirst-productions.github.io/ai-tech-email-temp/assets/images/right-arrow.png"
+                                                  alt=">"
+                                                  width="14"
+                                                  height="14"
+                                                  style="
+                                                    display: inline-block;
+                                                    width: 14px;
+                                                    height: 14px;
+                                                    border: 0;
+                                                  "
+                                                />
+                                              </td>
+                                              <td
+                                                style="
+                                                  padding: 0 20px 0 12px;
+                                                  font-family:
+                                                    &quot;Roboto&quot;, Arial,
+                                                    sans-serif;
+                                                  font-size: 14px;
+                                                  color: #ffffff;
+                                                  font-weight: 700;
+                                                  letter-spacing: 0.5px;
+                                                "
+                                              >
+                                                www.tmsaitechconference.com
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
           </table>
-        </div>
-      </div>
-    </div>
+          <!-- End email container -->
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
