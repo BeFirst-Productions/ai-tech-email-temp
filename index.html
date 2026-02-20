@@ -233,6 +233,7 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         display: inline-block;
+        text-decoration: none;
       }
       .launch-sub {
         font-size: 15px;
@@ -324,8 +325,12 @@
       }
       .delivers-pill {
         display: inline-block;
-        background: rgba(13, 13, 43, 0.6);
-        border: 2px solid #76399b;
+        /* Inner bg matches site theme dark blue/purple */
+        background:
+          linear-gradient(rgba(13, 13, 43, 0.9), rgba(13, 13, 43, 0.9))
+            padding-box,
+          linear-gradient(180deg, #73a9f0 0%, #ff33ff 100%) border-box;
+        border: 3px solid transparent;
         border-radius: 50px;
         padding: 15px 45px;
         font-family: "Roboto", sans-serif;
@@ -333,9 +338,13 @@
         font-weight: 700;
         color: #ffffff;
         letter-spacing: 1px;
+        /* Shadows: Sharp bright glow at top, Deep pink glow at bottom */
         box-shadow:
-          0 0 20px rgba(118, 57, 155, 0.6),
-          0 0 10px rgba(93, 160, 249, 0.4);
+          0 -2px 10px rgba(93, 160, 249, 0.8),
+          /* Focused Top Glow */ 0 -8px 25px rgba(93, 160, 249, 0.4),
+          /* Diffuse Top Glow */ 0 2px 10px rgba(246, 116, 198, 0.8),
+          /* Focused Bottom Glow */ 0 8px 25px rgba(246, 116, 198, 0.4),
+          /* Diffuse Bottom Glow */ inset 0 0 20px rgba(93, 160, 249, 0.1); /* Inner Glassiness */
       }
       .delivers-pill span {
         background: linear-gradient(to right, #ffffff, #9ea2fa, #f674c6);
@@ -355,6 +364,7 @@
         display: flex;
         flex-direction: column;
         gap: 0;
+        text-decoration: none;
       }
       .deliver-card-top {
         background: linear-gradient(180deg, #76399b, #5da0f9);
@@ -456,6 +466,8 @@
         width: 320px;
         flex-shrink: 0;
         margin-bottom: 20px;
+        text-decoration: none;
+        display: block;
       }
       .why-img-shape {
         width: 100%;
@@ -475,7 +487,7 @@
         bottom: 21px;
         left: 0px;
         background: #5d1a8a;
-        padding: 4px 60px 8px 10px;
+        padding: 5px 60px 4px 5px;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -493,17 +505,20 @@
         z-index: 5;
       }
       .why-banner .icon-circle {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         background: #ffffff;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #5d1a8a;
-        font-weight: 800;
-        font-size: 14px;
         flex-shrink: 0;
+      }
+      .why-banner .icon-circle svg {
+        width: 16px;
+        height: 16px;
+        fill: #5d1a8a;
       }
       .why-banner span {
         font-family: "Roboto", sans-serif;
@@ -803,6 +818,39 @@
         font-family: "Roboto", sans-serif;
         letter-spacing: 0.5px;
       }
+      @media screen and (max-width: 420px) {
+        .book-btn-url {
+          font-size: 9.5px;
+        }
+        .book-arrow-circle {
+          width: 20px;
+          height: 20px;
+          font-size: 10px;
+        }
+        .book-btn-new {
+          gap: 1;
+          padding: 5px 15px 5px 5px;
+        }
+        .why-banner {
+          bottom: 2px;
+        }
+
+        .forum-section {
+          padding: 25px 33px;
+        }
+        .forum-section p {
+          font-size: 10px;
+        }
+
+        .icon-circle {
+          width: 20px;
+          height: 20px;
+        }
+        .why-banner .icon-circle svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
 
       /* MEDIA QUERIES FOR RESPONSIVENESS */
       @media screen and (max-width: 600px) {
@@ -909,17 +957,20 @@
       <div class="hero">
         <div class="hero-content">
           <div class="tms-logo-area">
-            <img
-              src="assets/images/AITECH E-LOGO.png"
-              alt="TMS Logo"
-              style="
-                max-width: 320px;
-                height: auto;
-                display: block;
-                margin: 0 auto;
-                padding-bottom: 5px;
-              "
-            />
+            <a href="https://tmsaitechconference.com/">
+              <img
+                src="assets/images/AITECH E-LOGO.png"
+                alt="TMS AITECH Conference Logo"
+                style="
+                  max-width: 320px;
+                  height: auto;
+                  display: block;
+                  margin: 0 auto;
+                  padding-bottom: 5px;
+                  border: 0;
+                "
+              />
+            </a>
           </div>
 
           <div class="subtitle-line1">Maritime 4.0 and Beyond:</div>
@@ -982,7 +1033,9 @@
           <strong>The Maritime Standard</strong> announces the official launch
           of
         </p>
-        <div class="launch-title">TMS AITECH 2026</div>
+        <a href="https://tmsaitechconference.com/" class="launch-title"
+          >TMS AITECH 2026</a
+        >
         <p class="launch-sub">
           a new platform focused on artificial intelligence, digital
           transformation, and the future of intelligent shipping.
@@ -1019,7 +1072,7 @@
       </div>
 
       <!-- WHITE SPACER -->
-      <div style="background-color: #ffffff; padding: 40px 0"></div>
+      <div style="background-color: #ffffff; padding: 20px 0"></div>
 
       <!-- ===== WHAT AITECH DELIVERS ===== -->
       <div class="delivers-section">
@@ -1029,7 +1082,7 @@
           </div>
           <div class="delivers-grid">
             <!-- Card 1 -->
-            <div class="deliver-card">
+            <a href="https://tmsaitechconference.com/" class="deliver-card">
               <div class="deliver-card-top">
                 <div class="deliver-check">
                   <svg viewBox="0 0 24 24">
@@ -1046,10 +1099,10 @@
                   makers.
                 </p>
               </div>
-            </div>
+            </a>
 
             <!-- Card 2 -->
-            <div class="deliver-card">
+            <a href="https://tmsaitechconference.com/" class="deliver-card">
               <div class="deliver-card-top">
                 <div class="deliver-check">
                   <svg viewBox="0 0 24 24">
@@ -1066,10 +1119,10 @@
                   blockchain-integrated systems
                 </p>
               </div>
-            </div>
+            </a>
 
             <!-- Card 3 -->
-            <div class="deliver-card">
+            <a href="https://tmsaitechconference.com/" class="deliver-card">
               <div class="deliver-card-top">
                 <div class="deliver-check">
                   <svg viewBox="0 0 24 24">
@@ -1087,10 +1140,10 @@
                   compliance
                 </p>
               </div>
-            </div>
+            </a>
 
             <!-- Card 4 -->
-            <div class="deliver-card">
+            <a href="https://tmsaitechconference.com/" class="deliver-card">
               <div class="deliver-card-top">
                 <div class="deliver-check">
                   <svg viewBox="0 0 24 24">
@@ -1104,10 +1157,10 @@
               <div class="deliver-card-body">
                 <p>via the AITech Knowledge Hub</p>
               </div>
-            </div>
+            </a>
 
             <!-- Card 5 -->
-            <div class="deliver-card">
+            <a href="https://tmsaitechconference.com/" class="deliver-card">
               <div class="deliver-card-top">
                 <div class="deliver-check">
                   <svg viewBox="0 0 24 24">
@@ -1124,7 +1177,7 @@
                   leaders
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -1136,19 +1189,25 @@
 
       <!-- ===== WHY NOW ===== -->
       <div class="why-section">
-        <div class="why-image-wrapper">
+        <a href="https://tmsaitechconference.com/" class="why-image-wrapper">
           <div class="why-img-shape">
             <img
               src="./assets/images/AITECH E-ships-container.png"
-              alt="Shipping"
+              alt="TMS AITECH Conference Shipping"
             />
           </div>
           <div class="why-banner">
-            <div class="icon-circle">〉</div>
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+                />
+              </svg>
+            </div>
             <span>Why now?</span>
           </div>
           <div class="why-banner-line"></div>
-        </div>
+        </a>
         <div class="why-content">
           <p>
             The maritime sector is entering a major transformation era. With new
@@ -1232,9 +1291,9 @@
 
           <div class="footer-right">
             <span class="book-label">BOOK NOW</span>
-            <a href="https://www.tmsaitech.com" class="book-btn-new">
+            <a href="https://tmsaitechconference.com" class="book-btn-new">
               <div class="book-arrow-circle">›</div>
-              <span class="book-btn-url">www.tmsaitech.com</span>
+              <span class="book-btn-url">www.tmsaitechconference.com</span>
             </a>
           </div>
         </div>
